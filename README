@@ -1,0 +1,29 @@
+\documentclass{letter}
+
+\begin{document}
+
+\begin{picture}(100, 100)
+%\linethickness{2mm}
+\thicklines
+\put(0, 0){\circle{5}}
+\put(0, -40){\circle{5}}
+\put(40, 0){\circle{5}}
+\put(40, -40){\circle{5}}
+\put(2, -38){\line(1, 1){36}}
+\put(0, -2){\line(0, -1){36}}
+\put(-38, -2){\line(1, 1){36}}
+\put(40, -38){\line(0, 1){36}}
+\put(40, -38){\line(1, 1){14}}
+\put(160, -40){\circle{5}}
+\put(160, 0){\circle{5}}
+\put(158, -2){\line(-1, -1){14}}
+\put(2, -1){\line(4, -1){156}}
+\put(160, -2){\line(0, -1){36}}
+
+\put(100, -20){\circle*{3}}
+\put(110, -20){\circle*{3}}
+\put(120, -20){\circle*{3}}
+
+\end{picture}
+
+\end{document}
