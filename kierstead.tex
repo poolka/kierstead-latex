@@ -150,9 +150,36 @@ has a recursive winning strategy for the   K - L   expansion game,  then every
 recursive structure in   K   can be expanded to a recursive structure	in L.\\
 \newline
 \underline{Proof}.     Let $B = (B,R)$ be a recursive structure in   K.   The recursive expansion   $\bar{B}$ of $B$ is obtained from a run of the K-L expansion game. 
-For notational simplicity, using that K is closed under the formation of isomorphic images, assume that   $B = n$, and suppose that at each round   s   the K-player plays   $\memph{B^s} = \meph{B}(0,1,...,s-1)$   while the   L-player uses his recursive winning strategy to respond with  $\meph{\bar{B}^s}$.   
+For notational simplicity, using that K is closed under the formation of isomorphic images, assume that   $B = n$, and suppose that at each round   s   the K-player plays   $\meph{B^s} = \meph{B}(0,1,...,s-1)$   while the   L-player uses his recursive winning strategy to respond with  $\meph{\bar{B}^s}$.   
 Since   K   is closed under the formation of substructures each play by the   K-player is legal and the game continues until -each point of   B   has been enumerated.   
-The resulting structure   B   is clearly
+The resulting structure   $\bar{B}$   is clearly
+\newpage
+%
+% STRONA 6
+%
+an expansion of $\meph{B}$. 
+Since $\meph{\bar{B}}$ is the union of the chain of structures $\meph{\bar{B}^s}$ played by the L-player and L is closed under unions of chains, $\meph{\bar{B}}$ is in L. 
+The domain B is recursive since $\meph{B}$ is. 
+Since $\meph{B}$ and S are recursive one can effectively calculate the posi tion of the game after any finite number of rounds. Thus we can effectively determine whether or not any of the relations of $\meph{\bar{B}}$ hold for a sequence $\bar{x}$ by allowing the game to run until each point in $\bar{x}$   has appeared.    
+Hence   $\meph{\bar{B}}$  is recursive.$\Box$\\
+\newline
+\underline{Lemma} 2.    Suppose that A   is an infinite recursive structure, K   is a class of structures similar to   A   such that   K   is closed under the formation of isomorphic images and sums over A, and   L   is a class of similar structures closed under the formation of isomorphic images and substructures.
+If the K-player has a winning strategy in the   K - L   expansion game then there is a recursive structure in   K   that cannot be expanded to a recursive structure in L.\\
+\newline
+\underline{Proof}.    Let   S   be a finite winning strategy for the   K-player in the   K - L expansion game and   p   be a recursive bijection from N   to N x N. Without loss of generality assume that   A =   N.    
+Like a chess master, we shall simultaneously play infinitely many K-L expansion games against every possible recursive strategy for the L-player, using the K-players winning strategy. 
+The order in which we visit the various boards will be governed by the function p. The result will be a recursive structure B in R which cannot be expanded to a recursive structure in L.
+
+
+\underline{Algorithm} \underline{for} \underline{B}:   The algorithm proceeds in stages.   At stage s we construct $\meph{B^s}$.    After   $\omega$   stages we let   $\meph{B} = \bigcup_{s\in N} \meph{B^s}$.\\
+\underline{Stage} 0.    Set $f_e^0 = \emptyset = \meph{B_e}^0$    for all $e\in N$.
+\underline{Stage} s+1.   Suppose p(s) = (e,i). If $d\neq e$  set $f_d^{s+1} = f_d^s$ and $\meph{B}_d^{s+1}=\meph{B}_d^s$.   If $\Phi_e^s$
+defines an expansion of $\meph{B}_e^s$  to a structure  $\meph{\bar{B}}_e^s$whose preimage $\meph{\bar{C}}_e^s$ under $f_e^s$   is in
+L set $f_e^{s+1} = f_e^s \cup \{(|\meph{B}_e^s|,s)\}$ and $\meph{B}_e^{s+1} = f_e^{s+1}[S(\meph{\bar{C}}_e^s)]$; otherwise set $f_e^{s+1} = f_e^s$
+and $\meph{B}_e^{s+1} = B_e^s$.    Let   $\meph{B}_e^{s+1} = \sum_{e\in N} \meph{B}^{s+1}$.
+
+
+The predicate  "$\Phi_e^s$  defines an expansion of	$\meph{B}_e^s$ whose preimage under $\bar{C}_e^s$ under $f_e^s$ is in   L" is easily seen to be recursive since $\meph{B}_e^s$ is finite, "$\Phi_e^s(x)$ is defined" is a recursive predicate, and if $\bar{C}_e^s$   is in   L then $\bar{C}_e^s$   is one of the only finitely many legal positions which can be reached during a run of the K - L expansion game with the K-player using his finite winning strategy S. Using also that  A is recursive we see that we can effectively construct each $\meph{B}^s$.   Thus as in the proof of Lemma 1, $\meph{B} = \cup_{s\in N} \meph{B}^s$.   is recursive.
 \newpage
 %SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
