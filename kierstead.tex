@@ -96,6 +96,27 @@ Let $\Phi_e$   be the partial recursive function computed by the eth algorithm i
 The execution of      algorithm on a particular input occurs in a step by step manner.    
 If the execution of the   eth   algorithm   on   x   halts after at most   n   steps and outputs   y   we say that   $\Phi_e^n(x)$   is defined and equals y;
 \newpage
+
+
+\noindent otherwise we say that  $\Phi_e^n(x)$    is undefined.   With special care (Kleene [ 1936], Turing [1936]) we can arrange the list so that the predicate   T = \{(e,x,n): $Phi_e^n(x)$   is defined\} is recursive.    
+Thus in writing algorithms we can use statements of the form: if $\Phi_e^n(x) = y$ then ...  .    In general we can not use statements of the form:  if    $\Phi_e(x) = y$ then. . . , since there is no algorithm that will decide for arbitrary   e   whether the   eth   algorithm eventually produces output when started on the input   x.    
+For further details the reader should consult Machtey and Young [1978].\\
+
+
+The   K - L   \underline{expansion} \underline{game} is an infinite game played by two players, the K-player and the   L-player,  in the following fashion:    The play alternates between the two players with the   K-player moving first. 
+At the start of the i+1st round of play    the K-player will be confronted with a finite structure $B = (B, R_1,...,R_m,...,R_n)$    in   L, which is the expansion of a K-structure $B = (B,R_1,..., R_m)$.    
+The   K-player must define new relations $R_1^{+},...,R_m^+$     on $B^+ = B \cup \{i\}$   such that   $B^+ = (B^+, R_1^+,...,R_m^+)$ is in   K   and   B   is a substructure of $B^+$, i.e., $x\in R$. iff $x\in R_i^+$ for all x in B and $1 \leq i \leq m$. 
+The L-player responds by defining new relations   $R_{m+1}^+,...,R_n^+$ on   $\bar{B}^+$   such that   $\bar{B}^+ = (B^+,R_1^+,...,R_m^+,...,R_n^+)$    is   in   L   and   B is a substructure of   $\bar{B}^+$.   
+The K-player \underline{wins} a   K - L   expansion game if after finitely many rounds of play the L-player has no legal response;  the L-player wins if the game continues for infinitely many rounds or in the unlikely event that the   K-player cannot play legally.\\
+\indent A \underline{strategy} \underline{for} \underline{the}   K-\underline{player} is a function   S which assigns to each finite L-structure $\bar{B}$ with $\bar{B} = \{0,1,...,i-l\}$ a structure   $S(\bar{B}) = \bar{B}^+$. 
+The strategy S is a \underline{winning} \underline{strategy} if regardless of how the   L-player responds the K-player can eventually win the   K - L   expansion game by continuing to play $S(\bar{B})$ when confronted with   $\bar{b}$.
+Similarly a \underline{strategy} for the   L-\underline{player}   is a function   S   that assigns to each pair of structures  $\bar{B}$   in   L and   $B^+$   in K such that   $B^+ = B \cup \{i\}$   a structure   $S(\bar{B},B^+) = \bar{B}^+$.   The strategy   S   is a winning strategy if regardless of how the   K-player moves the L-player wins by always responding with   $S(\bar{B},B^+)$   when confronted with   $\bar{B}$   and $B^+$.\\
+\indent It is a consequence of K\"{o}nig's Lemma   that if the   K-player has a
+winning strategy for the   K - L   expansion game then there is a fixed   n such that regardless of how the   L-player responds the   K-player can win in at most n   rounds:   Consider the tree, whose nodes are the   L-structures that can start some round of a   K - L   expansion game in which the K-player follows his winning strategy, and whose nodes are ordered by the substructure relation.
+This tree is finitely branching.    If the   L-player could force arbitrarily long games, then the tree would be infinite, and by K\"{o}nig's Lemma would contain an infinite branch, which would correspond to a winning game for the L-player playing against the   R-player's winning strategy.    
+Thus if the It-player has a winning strategy that strategy can be chosen to be finite and thus recursive.    
+On the other hand, it is conceivable that the L-player has a winning strategy, which is so complex that it cannot be described by an algorithm.
+
 % SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
 %\linethickness{2mm}
