@@ -71,7 +71,31 @@ In this section we use the language of general relational structures to define t
 
 \newpage
 
+A (relational) i \underline{structure} is a system   A = (A, $\bar{R}$)   where   $\bar{R}$   is a sequence of relations on the domain   A.   
+To avoid certain technical difficulties we will only consider structures with finitely many relations.    
+Structures will be denoted with bold face letters;  the same letter in standard form will denote the domain of the structure.   
+Two structures (A,$\bar{R}$)   and   (B,$\bar{S}$) are similar    provided that   $\bar{R}$   and   $\bar{S}$ have    the same length and corresponding entries in   $\bar{R}$   and    $\bar{S}$   have the same rank.    The structure
+$(A,R_1,...,R_m...,R_n)$    is an \underline{expansion} of  the structure    $(A,R_1,...,R_m)$.    
+Let K be a class of similar structures and let   L   be another class of similar structures.   
+A   K - L   \underline{expansion} \underline{theorem} is an assertion of the form: Every structure in   K   has an expansion in   L.    Dilworth's Theorem is an example of a   K - L   expansion theorem. Matching theorems, coloring theorems, and dimension theorems for ordered sets also fall into this category.
 
+There are many equivalent ways to define the concept of a partial recursive or computable function.    
+For our purposes it will be enough to say that a \underline{partial} \underline{recursive} \underline{function}  $\Phi$    is a function that can be computed by an algorithm of finite length - if   x   is in the domain of $\Phi$ then the algorithm eventually produces the output $\Phi(x)$ when started on the input   x; if   x is not in the domain of     the algorithm produces no output when started on the input   x.   
+A \underline{recursive} \underline{set} is a set whose characteristic function is recursive. 
+Notice that every finite set is recursive. A precise definition of these concepts can be found in Machtey and Young [1978].   
+The domain of a partial recursive function may not be recursive; if it is we will say that the function is recursive.   
+This is a slight variance from the normal definition. 
+A structure   A   = (A,$\bar{R}$)    is \underline{recursive} if there is a recursive function  such that both $\Phi(0,x) = 1$   iff   x $\in$ A   and $\Phi(R, \bar{x}) = 1$   iff   $x\in R$, whenever R is in $\bar{R}$. We say that $\Phi$   defines   A.   
+If   A   is a recursive structure the domain of   A     and each of its relations are recursive sets.   
+To test whether x   is in   A, first check whether   (0,x)   is in the recursive set   dom($\Phi$) and if it is check to see whether   $\Phi(0,x) = 1$.
+It is also easy to see that if each of the relations of   A   is recursive and the domain of   A   is recursive then   A   is recursive.   
+Thus the domain and each of the relations of a recursive structure are completely described by a single algorithm of finite length. 
+A \underline{recursive} K-L \underline{expansion} \underline{theorem} is an assertion of the following form: Every recursive structure in K has can be expanded to a recursive structure in L.\\ 
+\indent It is possible to enumerate the countably many possible algorithms. 
+Let $\Phi_e$   be the partial recursive function computed by the eth algorithm in such a list.   
+The execution of      algorithm on a particular input occurs in a step by step manner.    
+If the execution of the   eth   algorithm   on   x   halts after at most   n   steps and outputs   y   we say that   $\Phi_e^n(x)$   is defined and equals y;
+\newpage
 % SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
 %\linethickness{2mm}
