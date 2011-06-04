@@ -21,9 +21,20 @@ Henry A. Kierstead
 \end{center}
 § 1 Introduction\\
 \indent
-Many mathematicians working in finite combinatorics are highly suspicious of infinite sets and structures.   This suspicion does not extend to all infinite structures.   The set of natural numbers with the usual order is considered quite acceptable and, on the whole, so is the set of real numbers with its usual order.   The problems arise when some unusual structure is placed on these sets as in well ordering the real numbers.   Other examples arise from extending theorems about finite structures to theorems about infinite   structures.    Once Dilworth's Theorem has been proven for finite ordered sets it is routine to extend it to infinite ordered sets of finite width,via the Compactness Theorem.   However the resulting structure may be qui te unusual.   The proof only shows the existence of a chain cover; it does not produce the chain cover.   This is the source of the uneasiness in both cases:    The structures whose existence is asserted have not been shown to be available for inspection.\\
+Many mathematicians working in finite combinatorics are highly suspicious of infinite sets and structures.   This suspicion does not extend to all infinite structures.   
+The set of natural numbers with the usual order is considered quite acceptable and, on the whole, so is the set of real numbers with its usual order.   
+The problems arise when some unusual structure is placed on these sets as in well ordering the real numbers.   
+Other examples arise from extending theorems about finite structures to theorems about infinite   structures.    
+Once Dilworth's Theorem has been proven for finite ordered sets it is routine to extend it to infinite ordered sets of finite width via the Compactness Theorem.   
+However the resulting structure may be quite unusual.   
+The proof only shows the existence of a chain cover; it does not produce the chain cover.   
+This is the source of the uneasiness in both cases:    The structures whose existence is asserted have not been shown to be available for inspection.\\
 \indent
-Rather than ignoring these existence results one should go one step further and ask whether there is a satisfactory structure available for inspection. This leads to further questions. What does it mean to be available for inspection? How would you show that there was no satisfactory structure available for inspection? For countable structures these concerns can be made precise and can often be resolved using the theory of recursive (i.e. computable) functions.   The resulting combinatorial theory is the subject of this article, which in particular will'concentrate on antichain covers, chain covers, and realizers of recursive ordered sets.\\
+Rather than ignoring these existence results one should go one step further and ask whether there is a satisfactory structure available for inspection. 
+This leads to further questions. What does it mean to be available for inspection? 
+How would you show that there was no satisfactory structure available for inspection? 
+For countable structures these concerns can be made precise and can often be resolved using the theory of recursive (i.e. computable) functions.   
+The resulting combinatorial theory is the subject of this article, which in particular will'concentrate on antichain covers, chain covers, and realizers of recursive ordered sets.\\
 \indent
 Let us agree that a structure is available for inspection if it is recursive, where, roughly speaking, a relational structure   P   is recursive if it is recursive, where, roughly speaking, a relational structure P is recursive if\\
 \newline
@@ -35,41 +46,30 @@ Let us agree that a structure is available for inspection if it is recursive, wh
 © 1986 American Mathematical Society 0271-4132/86 $1.00 + $.25 per page
 \end{flushright}
 
+\newpage
+
+there is a finite algorithm that will provide yes-no answers to questions of the form:  "Is    x    in the domain of    P?" and "Does $\bar{x}$    hold for the relation R?"  We shall see that the uneasiness resulting from the use of the Compactness Theorem is well founded,  for there exist recursive ordered sets (necessarily infinite) with finite width   w   that   cannot be covered by w recursive chains.    
+Two reasonable responses to this negative result are the traditional recursion theoretic response of analyzing the "degree of non-computability" of such a cover and the more recent combinatorial response, which we shall pursue, of searching for a recursive chain cover that uses some finite number of additional chains. 
+Thus we are asking whether there exists a function b such that every ordered set with fini te width w, which is available for inspection, has a chain cover consisting of b(n) chains, which is available for inspection. 
+From a finite point of view this approach leads to a very satisfying theory. 
+There can be no doubt that the structures under consideration really exist. 
+They are essentially finite since they can be stored using only finitely much space by storing the finite algorithms that describe them.    
+They are amenable to the type of explicit construction often used on finite structures.    
+The results we prove are quite interrelated. Recursive antichain covers and recursive realizers are used to construct recursive chain covers while recursive chain covers are used to construct recursive realizers.
+The proofs rely most heavily on algorithmic techniques and the theory of finite ordered sets.    
+Indeed, essentially all the recursion theory needed can be reduced to two lemmas. 
+The goal of this article is to present a collection of results, proofs, and problems on recursive ordered sets in a unified setting, which is accessible to discrete mathematicians with little or no background in recursion theory.\\
+\newline
+For the most part our notation is standard; a few special conventions are mentioned here. The set of natural numbers is represented by n. 
+Incomparability in ordered sets is denoted by $\Vert$. The restriction of a structure (a,$\bar{R}$) to the substructure generated by B $\subset$ A is denoted by (a,$\bar{R}$)$\vert$B.\\
 
 
+§2   K - L   Expansion Theorems\\
 
 
+In this section we use the language of general relational structures to define the notion of an expansion theorem.   Next we review the basics of elementary recursion theory and present the notion of a recursive expansion theorem.    Finally we introduce expansion games and prove two lemmas which reduce the proofs of recursive expansion theorems to finding winning strategies in expansion games.   These games are interesting in their own right and are related to on line algorithms.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\newpage
 
 
 % SEKCJA Z OBRAZKAMI
