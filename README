@@ -1,0 +1,8 @@
+
+kompilacja przez
+$ pdflatex kierstead.tex
+
+katalog figures jest przeznaczony na rysunki
+
+rysunki 1, 3 i 5 są zrobione programem dia
+katalog dia-diagrams jest przeznaczony do zapisywania sesji w programie dia.mając zapisane takie sesje można pokazać, że rzeczywiście te rysynki są zrobione przez nas, a nie wycięte z orginalnego pdfa.

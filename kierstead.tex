@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
-
+\usepackage{amsfonts}
 \begin{document}
 
 \begin{flushleft}
@@ -113,11 +113,48 @@ The strategy S is a \underline{winning} \underline{strategy} if regardless of ho
 Similarly a \underline{strategy} for the   L-\underline{player}   is a function   S   that assigns to each pair of structures  $\bar{B}$   in   L and   $B^+$   in K such that   $B^+ = B \cup \{i\}$   a structure   $S(\bar{B},B^+) = \bar{B}^+$.   The strategy   S   is a winning strategy if regardless of how the   K-player moves the L-player wins by always responding with   $S(\bar{B},B^+)$   when confronted with   $\bar{B}$   and $B^+$.\\
 \indent It is a consequence of K\"{o}nig's Lemma   that if the   K-player has a
 winning strategy for the   K - L   expansion game then there is a fixed   n such that regardless of how the   L-player responds the   K-player can win in at most n   rounds:   Consider the tree, whose nodes are the   L-structures that can start some round of a   K - L   expansion game in which the K-player follows his winning strategy, and whose nodes are ordered by the substructure relation.
-This tree is finitely branching.    If the   L-player could force arbitrarily long games, then the tree would be infinite, and by K\"{o}nig's Lemma would contain an infinite branch, which would correspond to a winning game for the L-player playing against the   R-player's winning strategy.    
-Thus if the It-player has a winning strategy that strategy can be chosen to be finite and thus recursive.    
+This tree is finitely branching.    If the   L-player could force arbitrarily long games, then the tree would be infinite, and by K\"{o}nig's Lemma would contain an infinite branch, which would correspond to a winning game for the
+\newpage
+\noindent L-player playing against the   K-player's winning strategy.    
+Thus if the K-player has a winning strategy that strategy can be chosen to be finite and thus recursive.    
 On the other hand, it is conceivable that the L-player has a winning strategy, which is so complex that it cannot be described by an algorithm.
 
-% SEKCJA Z OBRAZKAMI
+
+The reminder of this section is devoted to reducing the recursive
+theorems to follow to game theoretic results.    In order to state the crucial
+lemmas we need to define several operations on structures. The \underline{union} \underline{of} underline{a}
+\underline{chain} of similar substructures $(A_0,\bar{R}_0) \subset (A_1,\bar{R}_1) \subset ...$ denoted by
+$(A,\bar{R}) =  \bigcup_{i\in N}(A_i,\bar{R}_i)$,  is defined by   $A = \bigcup_{i\in N} A_i$ . and   $\bar{x} \subset R$ iff $\bar{x} \in R_i$, for
+some   $i \in N$, where   R   and   $R_i$    are corresponding relations in   $\bar{R}$   and   $\bar{R}^+$.
+Let   $A = (A,\bar{R})$   be a structure and   f   be   a bijection from A to   B. The
+\newcommand{\meph}{\mathbf}
+\underline{isomorphic} \underline{image} of A under f is the structure   $\meph{B} = (B,\bar{S})$ defined by
+$(x_j,...,x_r)\in R$ iff $(f(x_i),...,f(x_r)) \in S$, where   R   and   S   are corresponding
+relations in   $\bar{R}$   and  $\bar{S}$. Let   $\meph{A} = (A,\bar{R})$   be a structure and suppose that for
+each   $a\in A, \meph{B_a}   = (B, S)$ is a structure similar to $\meph{A}$ such that $B_a \bigcap B_{a'} = 0$ if $a \neq a'$.
+The \underline{sum} \underline{over}   $\meph{A}$   of the $\meph{B_a}$, denoted by   $(B,\bar{S}) =  \sum_{\meph{a}\in \meph{A}} B_a$   is defined by
+and $\aleph = (x_1,..., x_n)\in S$ iff either $\bar{x} \subset B_a$   and $\bar{x} \in S_a$, for some $a \in A$
+or $\bar{x} \not \subset B_a$   for any $a \in A, x_t \in B_{a(i)}$, and   $(a(l),. .. ,a(n)) \in R$,   where   $S, S_a$, and
+R   are corresponding relations in $\bar{S}, \bar{S_a}$, and $\bar{R}$.
+Let K be a   class	of similar structures and let A be a structure similar to the structures in	K. 
+We say that   K   is closed under the formation of, respectively, substructures,
+unions of chains, isomorphic images, and sums over   A, provided   B	is in K
+whenever   B   is, respectively, a substructure of a structure in   K,	a union of
+a chain of substructures in   K, the isomorphic image of a structure	in   K, or
+a sum over A   of structures in K.\\
+\newline
+\underline{Lemma} 1.   Suppose   K   is a class of similar structures closed under	the
+formation of substructures and isomorphic images and   L   is a class	of similar
+structures closed under the formation of unions of chains.    If the	L-player
+has a recursive winning strategy for the   K - L   expansion game,  then every
+recursive structure in   K   can be expanded to a recursive structure	in L.\\
+\newline
+\underline{Proof}.     Let $B = (B,R)$ be a recursive structure in   K.   The recursive expansion   $\bar{B}$ of $B$ is obtained from a run of the K-L expansion game. 
+For notational simplicity, using that K is closed under the formation of isomorphic images, assume that   $B = n$, and suppose that at each round   s   the K-player plays   $\memph{B^s} = \meph{B}(0,1,...,s-1)$   while the   L-player uses his recursive winning strategy to respond with  $\meph{\bar{B}^s}$.   
+Since   K   is closed under the formation of substructures each play by the   K-player is legal and the game continues until -each point of   B   has been enumerated.   
+The resulting structure   B   is clearly
+\newpage
+%SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
 %\linethickness{2mm}
 \thicklines
