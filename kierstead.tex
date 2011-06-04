@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \begin{document}
 
 \begin{flushleft}
@@ -180,6 +181,37 @@ and $\meph{B}_e^{s+1} = B_e^s$.    Let   $\meph{B}_e^{s+1} = \sum_{e\in N} \meph
 
 
 The predicate  "$\Phi_e^s$  defines an expansion of	$\meph{B}_e^s$ whose preimage under $\bar{C}_e^s$ under $f_e^s$ is in   L" is easily seen to be recursive since $\meph{B}_e^s$ is finite, "$\Phi_e^s(x)$ is defined" is a recursive predicate, and if $\bar{C}_e^s$   is in   L then $\bar{C}_e^s$   is one of the only finitely many legal positions which can be reached during a run of the K - L expansion game with the K-player using his finite winning strategy S. Using also that  A is recursive we see that we can effectively construct each $\meph{B}^s$.   Thus as in the proof of Lemma 1, $\meph{B} = \cup_{s\in N} \meph{B}^s$.   is recursive.
+\newpage
+
+To see that   B is a K-structure note that $B =  \bigcup_{s\in N} \sum_{e\in A} \meph{B}_e^s = \sum_{e\in A} \bigcup \sum_{s\in N} \meph{B}_e^s$ 
+and that for each   e    there exists a stage    t such that $\bigcup_{s\in N} \meph{B}_e^s = \meph{B}_e^t$.    Set i $\meph{B}_e = \meph{B}_e^t$.    Since   K is closed under the construction of images of isomorphisms and
+sums over   A, each  $\meph{B}_e$ is in   K and thus $\meph{B}$ is in K.\\
+\indent Finally suppose that $\meph{\bar{B}}$ were a recursive expansion of B. Then $\meph{\bar{B}}$ would be
+defined by some partial recursive function $\Phi_e$ which would also define an
+expansion $\meph{\bar{B}}_e$   of $\meph{B}_e$. Since L is closed under the formation of substructures and images of isomorphisms, $\meph{\bar{B}}_e$ and its preimage $\meph{\bar{C}}_e$     would be in L, which would
+contradict   $\bigcup_{s\in N} \meph{B}_e^s = \meph{B}_e$. $\Box$\\
+
+
+
+\noindent\S 3   Recursive Antichain Covers\\
+\newline
+\indent We begin our study of recursive ordered sets with recursive antichain covers, since as one might expect from the finite case,  the results are relatively easy to prove.   
+Every ordered set of finite height (the number of points in a maximum chain) h   can be covered by   h   antichains. 
+Schmerl proved the following recursive version of this result.\\
+\newline
+\underline{Theorem} 1.(Schmerl [1979])   Every recursive ordered set of finite height h can be covered by $\binom{h+1}{2}$  recursive antichains; moreover for all positive integers   h there are recursive ordered sets of height   h   that cannot be covered by less than $\binom{h+1}{2}$ recursive antichains.\\
+\newline
+\underline{Proof}. Let K be the class of ordered sets P = (P,R) of height at most h and let L be the class of all structures of the form $\bar{P} = (P,R,A_1,...,A_n)$ where (P,R) is in K, $(A_1,...,A_n)$ is an antichain cover of P, and $n = \binom{h+1}{2}$. Note that K and L satisfy the hypothesis of Lemma 1. 
+To prove the first part of the theorem we provide the L-player with a recursive winning strategy for the K-L expansion game. Relabel the antichains $A_1,...,A_n$ as $..,A_d,_u...$ where $0 \leq d+u \leq h-1$.   
+When confronted with a new point i in the
+finite ordered set $P^+$ the L-player should put i in the antichain $A_{d,u}^+$   , where d  is the length of the longest chain in P   strictly below i and u is the
+length of the longest chain in $P^+$ strictly above i.   This is a recursive
+winning strategy: We have (informally) provided the finite algorithm for
+computing the next move from any position, so the strategy is recursive. To
+see that it wins, it suffices to show that each $A_{d,u}^+$  is still an antichain.
+Suppose $i$ is comparable to $x$ and $x \in A_{d,u}$, say $i < x$. Then there is a chain of $u + 1$ elements strictly above $x$. Thus $i \not \in A_{d,u}^+$.\\
+\indent The second part of the theorem is contained in Theorem 2, a stronger (and later) result of Szemer\'{e}di, which will also be used in the proof of Theorem 4.$\Box$
+
 \newpage
 %SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
