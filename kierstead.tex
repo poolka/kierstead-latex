@@ -313,7 +313,51 @@ It is not known whether the bound in Theorem 3 is best possible. By Theorem 2, i
 Covering recursive ordered sets with recursive chains presents a considerably more difficult problem.   The author showed the existence of an exponential function   $b$, such that any recursive ordered set of width   $w$ can be covered by   $b(w)$   recursive chains, and that no such function was linear.
 (Half line of text lost) $b$	is at least quadratic.
 \newpage
+%
+% STRONA JEDENASTA
+%
+\noindent\underline{Theorem} 4.    (Kierstead [1981a] and Szemer\'{e}di [1982]) Every recursive ordered set of finite width   $w$   can be covered by $(5^w   - 1)/4$   recursive chains; moreover for all positive integers    $w$    there exist recursive ordered sets with width   $w$     that cannot be covered by fewer than  $\binom{w+1}{2}$ recursive chains.\\
+\newline
+\underline{Proof}.     Theorem 2 was formulated specifically to prove the second part of 
+Theorem 4.    Let    $\meph{P} = (P,R)$ be a recursive ordered set of height $w$ which has a
+recursive realizer   $(L_1,L_2)$ and which cannot be covered by fewer than $\binom{w+1}{2}$
+recursive antichains.    Define   $\meph{\hat{P}}$   to be $(\meph{P},L_1\cap L_2^*)$ where	$L_2^*$ is the dual of
+$L_2$.    Since   $L_1$   and   $L_2$   are recursive,  $L_2^*$     and $\meph{P}$   are also recursive. Any subset of   $P$   is a chain (antichain) in   $\meph{P}$   iff it is an antichain (chain) in $\meph{P}$.    
+Thus the width of   $\meph{\bar{P}}$   is   $w$   and   $\meph{\bar{P}}$   cannot be covered by fewer than $\binom{w+1}{2}$ recursive chains.\\
+
+
+The proof of the first part of the theorem is more complicated.   Here we
+give the main line of the argument, but leave many of the details for the
+reader to check.    Let $K_w$     be the class of ordered sets $\meph{P}$   of width at most $w$
+and let   $L_w$   be the class of structures $\meph{\bar{P}} = (P,R,C_1,...,C_n)$, where   $n =
+(5^w-1)/4$   and  $(C_1,...,C_n)$ is a chain cover of   $P$.    Both   $K_w$     and   $L_w$ satisfy
+the hypothesis of Lemma 1.   Thus it suffices to provide a winning strategy for
+thé   $L_w$-player.   The strategy is defined by recursion on   $w$.   When   $w=1$   we cannot go wrong, so consider the step $w = v+1$. 
+Let $S_v$ be a winning strategy for the $L_v$-player. 
+First the $L_w$-player trys to put the new point $i$ in a distinguished maximal chain $B$. 
+If this is impossible $i$ is put in a set $A$ on which a width $v$ order $S$ extending $R$ has been defined. 
+This order is extended to $i$. 
+Next the $L_v$-player's strategy is used to put $i$ in one, say $D_j$, of $m = (5^v-1)/4$ $S$-chains $D_1,...,D_m$. 
+Finally, using special properties of the order   $S$, $i$    is put in one of five $R$-chains   $C_{j,1},...,C_{j,5}$, which cover
+$D_j$. To give a precise description of this strategy we define a more involved expansion game.    Note that   $(5^w-1)/4 = 1+5(5^v-1)/4$   and relabel the chains
+$C_1,...,C_n$ as $B,C_{1,1},...,C_{1,5},...,C_{m,1},...,C_{m,5},~$.    Let   $L$   be the class of
+structures of the form   $\meph{P} = (P,R,A,S,D_1,... D_m,B,C_{1,1},..., C_{m,5}, \sim)$   such that:\\
+(0) $(P,R) \in K_w$;\\
+(1) $(A,B)$ is a partition of   $P$   such that\\
+(a) $B$   is a maximal $R$-chain,\\
+(b) $R\lceil A$   is a subset of   $S\lceil A$,\\
+(c) $(A,S,D_1,...,D_m) \in L_v$ , and\\
+(d) if   $x<z$   in   $S$   and   $x\Vert b\Vert z$   in   $R$, for some   $b\in B$ which was
+played before the latter of   $x$   and   $z$,    then   $x<z$ in $R$, and moreover, if $x<y<z$   in $S$, then   $y\Vert b$   in $R$.\\
+(2) $(A,\sim)$    is an equivalence relation such that:\\
+\newpage
+%
+% STRONA DWUNASTA
+%
+
+
 %SEKCJA Z OBRAZKAMI
+\newpage
 \begin{picture}(100, 100)
 %\linethickness{2mm}
 \thicklines
