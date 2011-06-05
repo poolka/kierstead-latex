@@ -249,6 +249,9 @@ The goal of the first stage is to arrange that the top   $h$   points, $T$, of  
 The goal of the second stage is to arrange that: $(P2,R,P2)$   has height   $g$; every element of   $P_2$   is under every element
 of $T$ in   $R$   and incomparable in   $R$  to every element of   $P_1 - T$;   and the $L_h$-player
 \newpage
+%
+% STRONA DZIEWIĄTA
+%
 is forced to use $\binom{g+1}{2}$	distinct antichains to cover $P_2$.	Then the   $L$ player
 will be forced to use   $h + \binom{h}{2}$	antichains in all and loose.\\
 \indent The second stage is easy.    The   $K$-player simply follows the strategy $S_g$
@@ -275,9 +278,40 @@ First we state a combinatorial lemma which is a slight variation of the key lemm
 \newline
 Lemma 3.    Let   $D = (D, \rightarrow)$ be a digraph which induces neither a directed 3-cycle nor a the digraph o-*~o-+~<>-4-<).    
 Let   $K$   be a clique and $I$ an independent set in   $\meph{D}$   such that for each   $\meph{k\subset K}$   there is  $i\in I$   such that $i\rightarrow k$. 
-Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}$.$\Box$
+Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}$.$\Box$\\
+\newline
+\underline{Theorem} 3. (Kierstead [1984]) If   $G$   is a recursive digraph that contains neither a directed 3-cycle nor o->~o~>-o—nor o--<-k>->--o->-o   as induced
+\newpage
+%
+% STRONA DZIESIĄTA
+%
+subgraphs then $G$ is recursively $2^n-1$-colorable, where $n = \omega(G)$, the clique size of $G$.\\
+\newline
+\underline{Proof}.    Let   $K$   be the class of digraphs   $D = (D,\rightarrow)$   with clique size   $n$ that contain neither a directed 3-cycle nor o->-o->-o-4-o   nor   o-4-o--4-o->--<> and let   $L$   be the class of structures   $\bar{D} = (D,\rightarrow,I_1,...,I_t)$, where   $t = 2^n - 1$, such that    $(D,\rightarrow)$    is in   $K$   and:  $(I_1,...,I_t)$    is a covering of   $D$ by independent sets.    
+It suffices to show that the   $L$-player has a recursive winning strategy in the   $K-L$   expansion game.   
+Relabel   $I_1,...,I_t$ as $....I_\sigma...$, where $\sigma$   is a (possibly empty) sequence of zeros and ones of length at most   $n-1$.    Suppose the   $L$-player is confronted with  $\bar{D}$   and   $D^+$, where   $D^+ = D\cup \{i\}$.    
+He   should put   $i$   in   $I^+$, where  $\sigma$   is the lexicographically least sequence such that   $I_\sigma \sup \{i\}$ is independent and for each proper initial subsequence  $\tau$   of $\sigma$   there exists   $y\in I_\tau$   such that $i\rightarrow y$ if   $t^-0$   is an initial subsequence of $\sigma$   and   $i\leftarrow y$   if   $\tau^-1$   is an initial subsequence of   $\sigma$. 
+Notice that if we do not restrict the length of $\sigma$, then such a sequence will exist: If $I_\emptyset \cup \{i\}$ is not independent then either $i \rightarrow y$ or $i \leftarrow y$ for some $y \in I_\emptyset$, say $i \rightarrow y$. Then try $I_{<0>} \cup \{i\}$. 
+Suppose this set is not independent, say $i \leftarrow y$ for some $y \in I_{<0>}$. Next try
+$I_{<0>} \cup \{i\}$. Continuing in this fashion, eventually an acceptable $\sigma$ will be found of length at most $i$.\\
+\indent To show that this strategy wins it is enough to prove that if   $i$   is put
+into   $I_\sigma^+$   where   $\sigma = <s_1,...,s_m>$, then there is an $m+1$-clique
+$K=\{x_1,...,x_{m+1}=i\}$ such that $(*) x_j \in I_{\tau^j}$, where $\tau^j$ is the initial subsequence
+of  $\sigma$  of length $j-1$, for   $l\leq j\leq m+1$.   We construct   $K$   by reverse recursion on
+$j$ .    Suppose that the clique $\{x_j,...,x_{m+1}\}, j>1$ has been constructed and
+satisfies $(*)$.   Then for each   $x_k, j\leq k\leq m+1$, there exists   $z_k\in I_{\tau^{j-1}}$   such that
+$x_k \rightarrow z_k$ if   $s_{j-1}=0$   and  $x_k \leftarrow x_k$	if $s_{j-1} = 1$.   Thus by Lemma 3 or its dual
+version there exists   $z$   in the independent subset $\{z_k:j\leq k \leq m+1\}$   of $I_{\tau^{j-1}}$ such that $\{z,x_j,...,x_{m+1}\}$    is a clique satisfying $(*)$.$\Box$\\
 
 
+It is not known whether the bound in Theorem 3 is best possible. By Theorem 2, it must be at least $\binom{h+1}{2}$.\\
+
+
+\noindent\S 4 Recursive Chain Covers\\
+
+
+Covering recursive ordered sets with recursive chains presents a considerably more difficult problem.   The author showed the existence of an exponential function   $b$, such that any recursive ordered set of width   $w$ can be covered by   $b(w)$   recursive chains, and that no such function was linear.
+(Half line of text lost) $b$	is at least quadratic.
 \newpage
 %SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
@@ -355,5 +389,3 @@ Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}
 \includegraphics[scale=0.5]{figures/Figure5.png}
 
 \end{document}
-
-
