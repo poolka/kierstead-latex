@@ -249,6 +249,36 @@ The goal of the first stage is to arrange that the top   $h$   points, $T$, of  
 The goal of the second stage is to arrange that: $(P2,R,P2)$   has height   $g$; every element of   $P_2$   is under every element
 of $T$ in   $R$   and incomparable in   $R$  to every element of   $P_1 - T$;   and the $L_h$-player
 \newpage
+is forced to use $\binom{g+1}{2}$	distinct antichains to cover $P_2$.	Then the   $L$ player
+will be forced to use   $h + \binom{h}{2}$	antichains in all and loose.\\
+\indent The second stage is easy.    The   $K$-player simply follows the strategy $S_g$
+(modified for the points in  $P_2$).    At the same time he relates each new point
+$i$	in $P_2$ to the points in $P_1$	by putting $i$ over all the points of $P_1 - T$
+and under all the points of   $T$   in   $L_1^+$   and putting   $i$   under all the points
+of   $P_1$   in $L_2^+$.
+It remains to explain the   $K_h$-players strategy for the first stage.
+Suppose the points   $Q_r$   from   $P_1$   have been played so that   $P\lceil Q_r$   has height
+at most   $r$, the top   $r$   points   $T_r$   of	$Q_r$ in $L_1$	are all incomparable in
+$R$,    and the   $L_h$-player has used exactly   $r$   antichains to cover $Q_r$, each of which contains an element of   $T_r$.    The   $K$-player should add new points $c_1,..., c_i,..., c_j$    to  $P_1$   one at a time, so that   $c_i$    is the   $r + 1$st point in   $L_1^+$   and the top point in   $L_2^+$, until the   $L_h$-player puts  $c_i = c_j$    into a new antichain.    
+Note that this will occur at or before a point at which $c_j$ is in a chain of length   $r + 1$   and that such a point will be reached since the set    $(c_1,.., c_j)$    is a chain.   
+Continuing in this manner, after replacing $r$   by   $r+1$,   $Q_r$   by   $Q_r \cup \{c_1,..., c_j\}$, and   $T_r$   by   $T_r \cup \{c_j\}$, the $K$~player will eventually obtain the goal of the first stage.$\Box$
+
+
+It is reasonable to ask whether the order relation or just its comparability graph is needed for the hypothesis of
+Theorem 1, i.e., can every recursive comparability graph with clique size $h$ be recursively $\binom{h+1}{2}$ colored?   An early result of Bean [1976] shows that
+this is not the case - there is a recursive comparability graph of clique size
+2	that cannot be recursively   $k$-colored for any finite $k$.    However the full strength of the order relation is not needed to obtain a finite bound on the recursive chromatic number of the structure.    
+Chvatal [*] proved that any digraph without odd cycles  $C_n$,  $n>3$, or induced subgraphs of the form o->-*>->-o-<--o   is perfect.   
+Such digraphs extend the class of ordered sets. 
+The next theorem is a recursive version of Chvatal's result.   
+First we state a combinatorial lemma which is a slight variation of the key lemma in Chvatal [1981].\\
+\newline
+Lemma 3.    Let   $D = (D, \rightarrow)$ be a digraph which induces neither a directed 3-cycle nor a the digraph o-*~o-+~<>-4-<).    
+Let   $K$   be a clique and $I$ an independent set in   $\meph{D}$   such that for each   $\meph{k\subset K}$   there is  $i\in I$   such that $i\rightarrow k$. 
+Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}$.$\Box$
+
+
+\newpage
 %SEKCJA Z OBRAZKAMI
 \begin{picture}(100, 100)
 %\linethickness{2mm}
