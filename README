@@ -1,6 +1,12 @@
 
 kompilacja przez
 $ pdflatex kierstead.tex
+$ bibtex kierstead.aux
+$ pdflatex kierstead.tex
+$ pdflatex kierstead.tex
+
+jeżeli bibliografia pozostaje nie zminiona to wystarczy
+$ pdflatex kierstead.tex
 
 katalog figures jest przeznaczony na rysunki
 
