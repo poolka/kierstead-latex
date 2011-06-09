@@ -12,19 +12,16 @@
 
 \newcounter{pagecounter}
 \setcounter{pagecounter}{75}
-%\addtocounter{pagecounter}{1}
 
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
 \renewcommand{\thepage}{\thepagecounter \addtocounter{pagecounter}{1}}
 \fancyhead[RO, LE]{\thepage}
-%\fancyhead[RO, LE]{\thepagecounter \addtocounter{pagecounter}{1}}
 \fancyhead[CE]{HENRY A. KIERSTEAD}
 \fancyhead[CO]{RECURSIVE ORDERED SETS}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-%\renewcommand{\thepage}{\thepagecounter \addtocounter{pagecounter}{1}}
 \begin{document}
 \thispagestyle{plain}
 \begin{flushleft}
@@ -294,23 +291,23 @@ It is reasonable to ask whether the order relation or just its comparability gra
 Theorem 1, i.e., can every recursive comparability graph with clique size $h$ be recursively $\binom{h+1}{2}$ colored?   An early result of Bean [1976] shows that
 this is not the case - there is a recursive comparability graph of clique size
 2	that cannot be recursively   $k$-colored for any finite $k$.    However the full strength of the order relation is not needed to obtain a finite bound on the recursive chromatic number of the structure.    
-Chvatal [*] proved that any digraph without odd cycles  $C_n$,  $n>3$, or induced subgraphs of the form o->-*>->-o-<--o   is perfect.   
+Chvatal [*] proved that any digraph without odd cycles  $C_n$,  $n>3$, or induced subgraphs of the form \includegraphics[scale=0.25]{figures/small/1.png} is perfect.   
 Such digraphs extend the class of ordered sets. 
 The next theorem is a recursive version of Chvatal's result.   
 First we state a combinatorial lemma which is a slight variation of the key lemma in Chvatal [1981].\\
 \newline
-Lemma 3.    Let   $D = (D, \rightarrow)$ be a digraph which induces neither a directed 3-cycle nor a the digraph o-*~o-+~<>-4-<).    
+Lemma 3.    Let   $D = (D, \rightarrow)$ be a digraph which induces neither a directed 3-cycle nor a the digraph \includegraphics[scale=0.25]{figures/small/1.png}.    
 Let   $K$   be a clique and $I$ an independent set in   $\meph{D}$   such that for each   $\meph{k\subset K}$   there is  $i\in I$   such that $i\rightarrow k$. 
 Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}$.$\Box$\\
 \newline
-\underline{Theorem} 3. (Kierstead [1984]) If   $G$   is a recursive digraph that contains neither a directed 3-cycle nor o->~o~>-o—nor o--<-k>->--o->-o   as induced
+\underline{Theorem} 3. (Kierstead [1984]) If   $G$   is a recursive digraph that contains neither a directed 3-cycle nor \includegraphics[scale=0.25]{figures/small/1.png} nor \includegraphics[scale=0.25]{figures/small/2.png} as induced
 \newpage
 %
 % STRONA DZIESIĄTA
 %
 subgraphs then $G$ is recursively $2^n-1$-colorable, where $n = \omega(G)$, the clique size of $G$.\\
 \newline
-\underline{Proof}.    Let   $K$   be the class of digraphs   $D = (D,\rightarrow)$   with clique size   $n$ that contain neither a directed 3-cycle nor o->-o->-o-4-o   nor   o-4-o--4-o->--<> and let   $L$   be the class of structures   $\bar{D} = (D,\rightarrow,I_1,...,I_t)$, where   $t = 2^n - 1$, such that    $(D,\rightarrow)$    is in   $K$   and:  $(I_1,...,I_t)$    is a covering of   $D$ by independent sets.    
+\underline{Proof}.    Let   $K$   be the class of digraphs   $D = (D,\rightarrow)$   with clique size   $n$ that contain neither a directed 3-cycle nor \includegraphics[scale=0.25]{figures/small/1.png}   nor \includegraphics[scale=0.25]{figures/small/2.png} and let   $L$   be the class of structures   $\bar{D} = (D,\rightarrow,I_1,...,I_t)$, where   $t = 2^n - 1$, such that    $(D,\rightarrow)$    is in   $K$   and:  $(I_1,...,I_t)$    is a covering of   $D$ by independent sets.    
 It suffices to show that the   $L$-player has a recursive winning strategy in the   $K-L$   expansion game.   
 Relabel   $I_1,...,I_t$ as $....I_\sigma...$, where $\sigma$   is a (possibly empty) sequence of zeros and ones of length at most   $n-1$.    Suppose the   $L$-player is confronted with  $\bar{D}$   and   $D^+$, where   $D^+ = D\cup \{i\}$.    
 He   should put   $i$   in   $I^+$, where  $\sigma$   is the lexicographically least sequence such that   $I_\sigma \sup \{i\}$ is independent and for each proper initial subsequence  $\tau$   of $\sigma$   there exists   $y\in I_\tau$   such that $i\rightarrow y$ if   $t^-0$   is an initial subsequence of $\sigma$   and   $i\leftarrow y$   if   $\tau^-1$   is an initial subsequence of   $\sigma$. 
