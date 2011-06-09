@@ -10,18 +10,19 @@
 
 \newcounter{pagecounter}
 \setcounter{pagecounter}{75}
-\addtocounter{pagecounter}{1}
+%\addtocounter{pagecounter}{1}
 
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-
-\fancyhead[RO, LE]{\thepagecounter}
+\renewcommand{\thepage}{\thepagecounter \addtocounter{pagecounter}{1}}
+\fancyhead[RO, LE]{\thepage}
+%\fancyhead[RO, LE]{\thepagecounter \addtocounter{pagecounter}{1}}
 \fancyhead[CE]{HENRY A. KIERSTEAD}
 \fancyhead[CO]{RECURSIVE ORDERED SETS}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
+%\renewcommand{\thepage}{\thepagecounter \addtocounter{pagecounter}{1}}
 \begin{document}
 \thispagestyle{plain}
 \begin{flushleft}
