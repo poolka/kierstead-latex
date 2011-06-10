@@ -9,6 +9,7 @@
 
 \usepackage{fancyhdr}
 
+
 \newcounter{pagecounter}
 \setcounter{pagecounter}{75}
 
@@ -23,24 +24,22 @@
 \renewcommand{\footrulewidth}{0pt}
 \begin{document}
 \thispagestyle{plain}
+\addtolength{\voffset}{-1.5cm}
 \begin{flushleft}
 Contemporary Mathematics\\
 Volume 57, 1986
 \end{flushleft}
-
-
-
-
-
-
-
+%\vspace{1mm}
 \begin{center}
 RECURSIVE ORDERED SETS\\
-Henry A. Kierstead
-%\maketitle
+\vspace{1mm}
+Henry A. Kierstead\\
 \end{center}
-§ 1 Introduction\\
-\indent
+\vspace{2mm}
+
+\noindent \S \hspace{1pt} 1 Introduction\\
+
+
 Many mathematicians working in finite combinatorics are highly suspicious of infinite sets and structures.   This suspicion does not extend to all infinite structures.   
 The set of natural numbers with the usual order is considered quite acceptable and, on the whole, so is the set of real numbers with its usual order.   
 The problems arise when some unusual structure is placed on these sets as in well ordering the real numbers.   
@@ -57,7 +56,6 @@ For countable structures these concerns can be made precise and can often be res
 The resulting combinatorial theory is the subject of this article, which in particular will'concentrate on antichain covers, chain covers, and realizers of recursive ordered sets.\\
 \indent
 Let us agree that a structure is available for inspection if it is recursive, where, roughly speaking, a relational structure   P   is recursive if it is recursive, where, roughly speaking, a relational structure P is recursive if\\
-\newline
 ---------------\\
 1980 Mathematics Subject Classification. Primary 03D45. supported by ONR grant N00014-85K-0494
 \newline
@@ -67,7 +65,7 @@ Let us agree that a structure is available for inspection if it is recursive, wh
 \end{flushright}
 
 \newpage
-
+\addtolength{\voffset}{1.5cm}
 there is a finite algorithm that will provide yes-no answers to questions of the form:  "Is    x    in the domain of    P?" and "Does $\bar{x}$    hold for the relation R?"  We shall see that the uneasiness resulting from the use of the Compactness Theorem is well founded,  for there exist recursive ordered sets (necessarily infinite) with finite width   w   that   cannot be covered by w recursive chains.    
 Two reasonable responses to this negative result are the traditional recursion theoretic response of analyzing the "degree of non-computability" of such a cover and the more recent combinatorial response, which we shall pursue, of searching for a recursive chain cover that uses some finite number of additional chains. 
 Thus we are asking whether there exists a function b such that every ordered set with fini te width w, which is available for inspection, has a chain cover consisting of b(n) chains, which is available for inspection. 
