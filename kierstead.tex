@@ -9,10 +9,9 @@
 
 \usepackage{fancyhdr}
 
-
+\sloppy
 \newcounter{pagecounter}
 \setcounter{pagecounter}{75}
-
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
@@ -409,9 +408,471 @@ later.    If   $i\sim^+ x$   and   $x\in C_{j,k}$   put   $i$ into   $C_{j,k}^+$
 $C_{j,e}^+$, where	$e$ is chosen so that neither the two equivalence classes
 immediately	over   $i$   in   $(A^+,S^+)\lceil D_{j}^+$ nor the two equivalence classes
 immediately	below   $i$   in   $(A^+,S^+)\lceil D_j^+$  are contained in   $C_{j,e}$.
+%
+% STRONA TRZYNASTA
+%
+To complete the proof it must be verified that $P^+$ is indeed in $L^+$.
+Most of this identification is left to the reader, as it is tedious, but routine, when done in order. We will however show (1c)
+and that given (1) and (2), (3) holds. For (1c) the main point that must be checked is that $(A^+, S^+)$ is an ordered set of width at most v.
+Reflexivity and antysymmetry are easy. For transitivity the only problem arises when $(p < i < q)$ in $S^+$.
+Choose $p_0$ and $q_0$ in $A$ so that $p_0$ is as large as possible in $S^+$ and $q_0$ is as small as possible in $S^+$ subject to
+$p \leq p_0 < i < q_0 \leq q$ in $S^+$. By the transitivity of $(A,S)$ it suffices to show that $p_0 < q_0$ in $S^+$. By the choice of 
+$p_0$ and $q_0, p_0 <i <q_0$ in $S^+$ by conditions (4) or (5), but not (6). Clearly there is no problem if $p_0 < i$ and $i < q_0$ in $S^+$
+by the same condition. So suppose $p_0 <i$ in $S^+$ by (4) anf $i < q_0$ in $S^+$ by (5). Then in $R^+$, $i$ ant thus $p_{0'}$ is under any
+element of $B$ wich is incomparable to $q_0$. Thus $p_0<q_0$ in $S$ by (5).
 
-\cite{Bean76}
-\nocite{*}
+To see that the width of $(A^+, S^+)$ is at most $v$ we show that for any anichain $I$ in $S^+$ there exists $b \in B$ such that $I \cup \{b\}$
+is an antichain in $R^+$. We argue by induction on $|I|$. The case $|I| = 1$ is trivial, so suppose $j,k \in I$. Since $j\parallel k$ in $S^+$,
+there exists $b \in B$ such that $j \parallel b \parallel k$ in $R^+$. By the inductive hypothesis there exists $c,d \in B$ such that $c$ is 
+incomparable to every element of $I-\{k\}$ in $R^+$. If $b,c$ and $d$ are not distinct we are clearly done; otherwise the middle element
+of $b,c$ and $d$ in $R^+$ is incomparable to every element of $I$ in $R^+$.
+
+To show that each $C^+_{j,k}$ is a chain, suppose $i$ and $x$ are in $C^+_{j,k}$. If $i\sim^+x$ then by (2a) $i$ is incomparable to $x$ in $R^+$.
+So suppose that $i\not\sim^+x$. Without loss of generality suppose that $i<x$ in $S^+$. Choose $u$ and $v$ in $D^+_j$ such that $i<u<v<x$ in $S^+$,
+$i \not\sim u \not\sim v \not\sim x$, and $u$ abd $v$ are each the first elements of their respective equivalence classes to be played. Since $B^+$
+is maximal there are elements $u'$ and $v'$ in $B^+$ such that $u' \parallel u$ and $v' \parallel v$ in $R^+$. In fact $u'$ and $v'$
+can be chosen so that $u'$ was played before $u$ and $v'$ was played before $v$. We claim that $v'<x$ in $R$: Cartainly not $x<v'$ in $R$ since
+$v<x$ in $S$. If x were incomparable to $v'$ then $x$ would be equivalent to $v$. This uses (1d), the bias for (7), and the fact that $v$
+was the first element of its equivalence class played. Similarly $u < v'$. Here, lacking the bias for (7), we need that both $u$ and $v$
+are the first elements of their respective equivalence classes. Also $u' < v'$. Finally either $i < u'$ ot $i<u$ in $R^+$: Certainly not
+$u'<i$ in $R^+$. If $u' \parallel i$ in $R^+$ then using (1d) $i<u$ in $R^+$. In either case $i<x$ in $R^+$. This is illustrated in Figure 2. 
+
+%
+% STRONA CZTERNASTA
+%
+Again we note that the greedy strategy $S$ fails miserably. Let $K$ be the class of ordered sets of width 2 and let $L_n$ be the class of
+structures of the form $(P,R,C_1,...,C_n)$ such that $(P,R) \in K$ and $(C_1,...,C_n)$ is a chain cover of $(P,R)$. \underline{Figure 3}
+illustrates a strategy for the $K$-player which will defeat any $L_n$-player who uses strategy $S$, in the $K-L_n$ expansion game.
+Each poin is labeled $(i,j)$ where $i$ is the name of the point and $j$ is the index of the chain $C_j$ into which the greedy strategy 
+puts $i$.
+
+Closing the enormous gap between the quadratic lower boun and exponential upper bound of Theorem 4 remains an important open problem. 
+In certain special cases more can be said. The author's original argument gives the better lower bound of 5 in the case of width 2. 
+Even here there is a nagging gap between the lower bound and the upper bound of 6. For recursive interval orders the author and Trotter
+were able to give an exact linear answer. These results are presented below.\\
+\newline
+\underline{Theorem}5. (Kierstead [1981a]) There exists a recursive ordered set of width 2 which cannot be fewer than 5 recursive chains.\\
+\newline
+\underline{Proof}. Let $K$ be the class of ordered sets of width 2; let $L$ be the class of structures $(P,R,c_1,...,c_4)$
+such that $(P,R)$ is in $K$ and $(c_1,...,c_4)$ is a chain cover of $(P,R)$; and let $A=(N,S,N,...,N))$ where $S$ is the natural order on $N$.
+Then $K,L$ and $A$ satisfy the hypothesis of Lemma 2. Thus it suffices to provide the $K$-player with a winning atrategy in the $K-L$ expansion
+game.
+
+We begin by identyfying two positions from which the $K$-player can win. These positions are shown in \underline{Figure 4(a) and 4(b)}. The loops
+represent chains of unspecified length. An upper case letter next to a point indicates, up to permutation, in which chain the $L$-player has placed
+that point. An uppercase letter next to a loop indicates that at least one point from the loop is in the chain represented by the letter. The point 
+with the arrow represents the winning move. There may be other point entirely above or entirely below all the specified points. Of course the dual
+of these positions are also winning positions.
+
+The $K$-player can obtain either the first or the second position. First, he plays his $53 = 4 \cdot 13 + 1$ points, forming a linear order.
+The $L$-player is forced to put at least 14 of these, asy $a_1,...,a_{14}$, where $a_i < a_j$ if $i<j$, in the same chain $A$. We can ignore the
+remaining points by letting them behave in the same manner as the nearest $a_i$. Next the $K$-player plays $b_7$ and $b_8$ , the $k$-player plays
+$c$ as shown in \underline{Figure 4(c) or 4(d)}. In the first case the $L$-player must put $c$ into a new chain $C$; in the second case
+we may assume by duality that he does. The next sequence of plays is shown in \underline{Figure 4(e)}. First the $K$-player plays $b_1$. The
+$L$-player dare not put $b_1$ in chain $D$. Without loss of generality suppose he puts $b_1$ in $B$. The $K$-player responds with $b_3$.
+The $L$-player puts $b_3$ in in chain $B$ and consider \underline{Figure 4(f)}. The $K$-player plays $c'$. To avoid position 4(a), the $L$-player
+must put $c'$ in chain $C$, to which the $K$-player responds with $b_5$. As before, putting $b_5$ into chain $D$ or $C$ leads to position 4(a) or
+4(b), so the $L$-player puts $b_5$ into chain $B$. Finally the $K$-player obtains position 4(a) by playing $d'$.\\
+%
+% STRONA PIĘTNASTA
+%
+\newline
+\underline{Theorem} 6. (Kierstead and Trotter [1981]) Every recursive interval order of width $w$ can be covered by $3w-1$ recursive chains;
+moreover there are recursive interval orders with width $w$ which cannot be covered by fewer than $3w-2$ recursive chains.\\
+\newline
+\underline{Proof}. For the first part of the theorem, let $K_w$ be the class of interval orders $P = (P,R)$ of width at most $w$ and let $L_w$ 
+be the class of structures $\overline{P}= (P,R, C_1,...,C_{3w-2})$ such that
+$(P,R)$ is in $K$ and $(C_1,...,C_{w-2})$ is a chain cover of $P$. Both $K_w$ and $L_w$
+satisfy hypothethesis of Lemma 1 so it suffices to provide a recursive winning strategy
+$S$ for the $L_w$-player in the $K_w - L_w$ expansion game.
+
+The strategy is defined by recursion on $w$. There is no problem when $w=1$, so consider
+the case $w=v+1$. Lest $S_v$ be a winning strategy for the $L_v$-player in the
+$K_v - L_v$ expansion game. When the $L_w$-player is confronted with $P^+$ and 
+$\overline{P}$, where $P^+ = R \cup \{ i \}$ he first tries to place $i$ i na subset
+$B^+$ of width $v$. If he succeeds he then uses the strategy $S_v$ to put $i$ in one of
+the chains $C^+_1,...,C^+_{3v+1}$.
+
+To show that this is indeed a winning strategy, we prove that if $i$ is in $A^+=P^+-B^+$
+then there are at most two other elements of $A^+$ which are incomparable to $i$. We 
+begin by making two observations about interval orders. First, interval orders do not
+contain suborders of the form $\underline{2} + \underline{2} = obrazek$. Second, a linear
+order can be defined on the maximum antichain of an intercal order by setting $I <J$ iff
+there exists $i \in O$ such that %i <k$ in the interval order.
+
+Next we show  $P^+\lceil A^+$ has width 2. Consider $x,y$ and $z$ in $A^+$. There
+exists antichains $X,Y$ and $Z$ of width $v$ contained in $B$ such that, respectively,
+$x, y$ and $z$, are incomparable to every element of, respectively, $X,Y$ and $Z$.
+Suppose $ X \leq Y \leq Z$. If $x \parallel y$ and $y \parallel z$ then $x$ is comparable
+to z: There exists $x'$ and $z'$ in $Y$ such that $ x< x'$ in $R$ and $z'<z$ in $R$.
+If $x \parallel z$ then $x,x',z',z$ is a suborder of type $\underline{2} +
+\underline{2}$. Thus $x$ is comparable to $z$.
+
+Finally, suppose $i$ is in $A^+$ and $i$ is incomparable to three other elements $x,y$ 
+and $z$ in $A$. Then $\{a,y,z\}$ is a chain, say $x\leq y \leq z$. Let $Y$ be an
+antichain of width $v$ contained in $B$ such that $y$ is incomarable to 
+evety element of $Y$. Then $i$ is comparable to some element $i'$ in $Y$.
+Without loss of generality $i<i'$ in $R$. But this is a contradiction, since
+$i,i',y,z$ is a suborder of type $\underline{2} + \underline{2}$\\
+
+For the second part of the theorem, let $L_w'$ be the class of stuctures
+$\overline{B} = (P,R,C_1,...,C_{3w-3})$ such that $(P,R)$ is in $K_w$ and 
+$(C_1,...,C_{3w-3})$ is a chain cover of $P$ and let $A=(N,S)$, where $S$ 
+is the natural order on $N$. Then $K_w,L_w'$ and $A$ satisfy the
+hypothesis of Lemma 2. Thus it suffices to show that the $K_w$-player has
+a winning strategy $S$ in $K_x-L_w'$ expansion game.
+%
+% STRONA SZESNASTA
+%
+We define $S$ by recursion on $w$. If $w=1$ then the $L_w'$-player cannot
+even respond to the first play, so suppose $w=v+1$ and $S_v$ is a winning atrategy
+for the $K_v$-player in the $K_v-L_v'$ expansion game. The $K_w$-player starts
+the game by using the strategy $S_v$ to play a chain of 
+$n = 3 \cdot {{3w-3} \choose {3v-2}} +1$ subinterval orders $P_i$ in $K_v$ so that
+the $L_w$player has used the same $3v-2$ distinguished chains.The resto of $K$-players
+strategy is illustrated in  Figure 5, where loops represent possibly empty chains of
+suborders $P_i$ and upper case letters represent chains among the distinuished chains.
+Te $K$-player plays $x$ and $y$, as shown in \underline{Figure 5(a)}, and then waits
+to see whether the $L$-player puts them both in the same chain. Dependinf on the 
+$L$-player's choice the $K$-player wins by playing as shown in
+\underline{Figure 5(b) or 5(c)}.\\
+
+It is not known whether there exists a function $b$ such that every comparability
+graph with independence number $i$ can be covered by $b(i)$ recursive cliques.
+However in the proof of Theorem 6 we only needed the comparability graph.
+Thus we have the following:\\
+\newline
+\underline{Corollary}. Every recursive interval graph of clique size $\omega$ can
+be recursively $3\omega -2$-colored.\\
+\newline
+We end this section by proving a strong chain covering theorem for ordered sets with small 
+recursive dimension.\\
+\newline
+\underline{Theorem} 7. (Kierstead, McNulty and Trotter [1984]) Every recursive
+ordered set with recursive dimension $d$ and with $w$ can be covered by 
+${{w+1} \choose 2}^{d-1}$ recursive chains.\\
+\newline
+\underline{Proof}. We argue by induction on $d$. Let $P = (P,R)$ be na ordered set 
+with recursive dimension $d$ and width $w$. The case $d=1$ is trivial, so suppose
+$d=e+1$ and $(L_1,...,L_{e+1})$ is a recursive realizer of $P$. Let
+$s=l_1 \cup ... \cup L_e\cup L_{e+1}^*$, where $L_{e+1}^*$ is the dual of $L_{e+1}$.
+Then $P=(P,S)$ is recursive and the height of $P$ is bounded by $w$. Thus by Theorem 1, $P$
+can be covered by ${w+1} \choose 2$ recursive antichains in $P$. If $A$ is a recursive antichain
+realizer $(L_1 \lceil A,...,L_e \lceil A)$. Thus be the inductive hypothesis, each of the 
+${w+1 \choose 2}$ recursive antichains covering $P$ can be covered by ${{w+1} \choose 2}^{e-1}$
+recursive chains in $P$.\\
+
+
+\noindent\S 5 Recursive Realizers\\
+
+
+The concept of recursice dimension, which was introduced in $\S 3$, is particularly
+rewarding because of its interaction with theories of recursive chain and antichain covers.
+We have already seen that this concept can be combined with results on recursive antichain covers to prove results
+on recursive chain covers. In this section we will use recursive chain covers to construct
+recursive realizers of certain ordered sets. As is wll known, the ordinary dimension
+of an ordered set is bounded by its width $w$. A realizer is produced by first covering the ordered set with 
+$w$ chains and then for each chain $C$ construction a linear extension which puts each point in 
+$C$ over all points incomparable to $a$. Here we follow a similar approach, but the construction
+will require more linear extensions and be considerably more involved.
+
+%
+% STRONA SIEDEMNASTA
+%
+Before proceeding with the main redult we must narrow the scope of ordered
+sets to be considered. A $c$-crown $(c>2)$ is an ordering on $2c$ elements
+of the form shown in Figure 6(a). An ordered set is crown-free
+if it does not contain any $c$-crowns as suborders. Our first result shows that we must restrict our
+attention to ordered sets without 3-crowns.\\
+\newline
+\underline{Theorem} 8. (Kierstead, McNulty and Trotter [1984]) For every positive integer $d$ there is a 
+recursive ordered set $P$ with width 3, which can be covered by 4 recursive chains,
+but has recursive dimension greater than $d$.\\
+\newline
+\underline{Proof}. Let $K$ be the class of structures of the form
+$P=(P,R,C_1,C_2,C_3,C_4)$ such that $(P,R)$ is an ordered set with width at most 3 and 
+$(C_1,C_2,C_3,C_4)$ is a chain cover of $(P,R)$; let $L$ be the class of structures
+of the form $P=(P,R,C_1,C_2,C_3,C_4)$ such that $(P,R)$ is in $K$ and
+$(L_1,...,L_d)$ is a realizer of $(P,R)$; and let $A=(N,S,N,N,N,N)$ where
+$S$ is the natural order on $N$. Then $K,L$ and $A$ satisfy the hypothesis 
+of Lemma 2, so it suffices to provide the $K$-player with a winning strategy
+in the $K-L$ expansion game.
+
+Let $\overline{P} = (P,R,C_1,...,C_4,L_1,...,L_d)$ be in $L$. A pair of $R$-chains
+$u<v$ and $x<y$ is said to be \underline{pointlike} in $\overline{P}$ 
+provided that in each linear extension $L_j$ either both $u$ and $v$ are below
+both $x$ and $y$ or vice versa. The $K$-player's strategy consists of two 
+stages. During the first stage he continues to add new points to the bottom
+of $C_1$ and to the top of $C_2$ so taht there are no comparabilities between points 
+in $C_1$ and points in $C_2$, until the $L$-player is forced to make the bottom
+two points $c_1^{i+1} < c_1^i$ of $C_1$ and the top two points $c_2^i < c_2^{i+1}$
+of $C_2$ be a pair of point like chains. After at most $2d$ roinds whis will be accomplished:
+Let $M_i=\{k: c_a^i < c_2^i$ in $L_k\}$. Observe that $M_i \subset M_{i+1}$ ant that if $M^i = M^{i+1}$ then
+$c^{i+1}_1 < c^i_1$ and $c_2^i < c_2^{i+1}$ are a pair of point likechains. Since $(L_1,...,L_d)$
+is a realizer of $(P,R), 1 \leq |M_i| \leq |M_{i+1}| \leq d-1$. Thus after
+$i+1 \leq d$ sequences of two rounds $M_i = M_{i+1}$ and we are done. 
+
+To complete his victory in the second stage the $K$-player adds points
+$x \in C_3^+$ and $y \in C_4^+$ as shown in Figure 6(b). Since $p$ is pointlike
+it is impossible for the $L$-player to put $x$ over $y$ in any $L_j, 1 \leq j\leq d$.
+
+It is not hard to iterate the above contstuction to obtain a single recursive width 3
+ordered set that has infinite recursive dimension. The main result of this section provides
+a bound, in terms of width, on the recursive dimension of crown-free ordered sets, when combined with Theorem 4.\\
+\newline
+\underline{Theorem} 9. (Kierstead, McNulty and Trotter [1984]) Every recursive crown-free
+ordered set, which can be covered by $c$ recursive chains, has recursive dimension
+at most $c!$; moreover there exists recursive crown-free ordered sets, which can be covered
+by $c$ recursive chains, but have recursive simension at least $c {{c-1}\choose t}$, where
+$t= \lceil \frac{c-1} {2} \rceil$.\\
+\newline
+%
+% STRONA OSIEMNASTA
+%
+\underline{Proof}. For the first part, let $K$ be the class of structures
+$P = (P,R,C_1,...,C_c)$ such that $(P,R)$ is an ordered set and $(c_1,...,C_c)$
+is a chain cover of $P$. Let $L$ be the class of structures
+$\overline{P} =(P,R,C_1,...,C_c,L_1,...,L_{c!})$ such that $(P,R,C_1,...,C_c)$ is in
+$K$ and $(L_1,...,L_{c!})$ such that $(P,R,C_1,...,C_c)$ is in $K$ and $(L_a,...,L_{c!})$
+is a realizer of $(P,R)$. Since $K$ and $L$ satisfy the hypothesis of Lemma 1, it
+suffices to provide the $L$-player with a recursive winning strategy in the $K-L$ 
+expansion game.
+
+Suppose that in the $i+1$st round of play the $L$-player is confronted by $P^+$ in
+$K$ and $\overline{P}$ in $L$, where $\overline{P} = P \cup \{i\}$. He must decide where to place $i$
+in wach of the linear extensions $L^+_j, 1\leq j\leq c!$. In each $L_j$ there is ab
+interval into which $i$ can be inserted: The upperbound of this interval (if any)
+is the $L_j$-least element of $P$ that is larger than $i$ in $R^+$, while the lower
+bound (if any) is the $L_j$-largest element of $P$ that is less than $i$ in $R^+$
+Positioning $i$ anywhere in this interval will be based on the chain cover $(C^+_1,...,C^+_c)$.
+For each $x \in P^+$ let $\alpha (x)$ be the index of the chain into which the $K$-player has
+placed $x$. Relabel the linear extentions $L_1,...,L_{c!}$ as $...L_{\sigma}...$, where
+$\sigma$ is a linear order (permutation) on the set $\{1,...,c\}$. The $L$-player's strategy
+is: Let $x$ be the $L_{\sigma}$-least element of $P$ such that not $x<i$ in $R^+$ and either
+$i<x$ in $R^+$ o r $\alpha (i) < \alpha (x)$ in $\sigma$. Insert $i$ immediately
+below $x$ in $L^+_{\sigma}$. If there is no such $x$, put $i$ at the top of $L^+_{\sigma}$
+
+It remains to show that $(...L^+_{\sigma}...)$ is a realizer of $(P^+,R^+)$. It
+suffices to choose an arbitrary incomparable pair $(x,y)$ and show that there is 
+at least one $\sigma$ for which $y<x$ in $L_{\sigma}^+$. Observe that if $x$ is adjacent to $y$ in $L^+_{\sigma}$
+and $x \parallel y$ then $x<y$ in $L^+_{\sigma}$ iff $\alpha (x) < \alpha (y)$ in $\sigma$.
+Of course we should choose $\sigma$ so that $\alpha (x)$ is the gratest element
+in $\sigma$ and $\alpha (y)$ is the least element in $\sigma$. But this may not be 
+enough. For example if $P =\{x,u,v,y\}, x<u\parallel v<y$ in $R, \alpha (u) < \alpha (v)$
+in $\sigma$, and $u$ and $v$ are inserter before $x$ and $y$, then $x<u<v<y$ in $L_{\sigma}$.
+Thus we also need $\alpha (v) < \alpha (u)$ in $\sigma$. More generally the interval between $x$
+and $y$ in $L_{\sigma}$ could be: $x = w_0<w_1<...<w_{n+1} = y$. Then for all $i$, either
+$w_i < w_{i+1}$ in $R$ or $w_i \parallel w_{i+1}$ and $\alpha (w_i) < \alpha (w_{i+1})$ in 
+$\sigma$. Such an interval will be called an $(x,y)$-\underline{blocking interval} for $\sigma$.
+It suffices to find a $\sigma$ which does not have an $(x,y)$-blocking interval.
+
+An ordered set on $2n$ points $(n\geq 1)$ of the form: rysunek is called an \underline {even up-fence}
+from $x$ to $q$. Let $\Delta$ be the binary relation on $\{1,...,n\} - \{\ alpha (x), \alpha (y)\}$
+defined by $\beta \Delta \gamma$ if there exists $p \in C_{\beta}$ and $q \in C_{\gamma}$
+such that in $R p<q$ and there exists an even up-fence $F$ from $x$ to $q$, all of whose points
+are incomparable to both $p$ and $y$. We say that the pair $(F,p)$ witnesses $\beta \Delta \gamma$.
+Observe that $\Delta$ is defind in terms of representatives of the chains $C_{\beta}$ anf $C_{\gamma}$
+and that the conditions need not be satisfied by every pair of representatives.\\
+%
+% STRONA  DZIEWIĘTNASTA
+%
+\newline
+\underline{Claim} 1. The relation $\Delta$ is a strict interval order.\\
+\newline
+\underline{Proof}. It suffices to chow that $\Delta$ is irreflexive and does not induce rysunek.
+The formar is obvious since each $C_{\alpha}$ is a chain. Suppose $\Delta$ contains rysunek
+Let $(F,p)$ and $(H,r)$ witness $\beta \Delta \gamma$ and $\delta \Delta \epsilon$. Since neither
+$\beta \Delta \epsilon$ nor $\delta \Delta \gamma$, $p$ and $r$ are both under elements of $H$
+and $F$. Let $s'$ be the element of $H$ closest to $x$ that is over $p$ and $q'$ be the element of $F$
+closest to $x$ that is over $p$ and $q'$ be the element of $F$ closest to $x$ that is over $r$. See
+Figure 7(a). Then $\{s',p,y,r,q'\}$ induces the suborder rysunek, which can be extended to a crown in
+$F \cup H \cup \{y,p,r\}$. With thic contradiction the proof of the claim is complete.\\
+
+Let $\overline{\Delta}$ be the extension of $\Delta$ formed by making $\alpha (y)$ a minimum element
+and $\alpha (x)$ a maximum element. Then $\overline{\Delta}$ is still an interval order. Choose an interval
+representation of $\overline{\Delta}$ and let $\sigma$ be the linear extension of $\overline{\Delta}$
+by left end position with respect to this representation.\\
+\newline
+\underline{Claim} 2. (a) If $\alpha (v) < \alpha (w)$ in $\overline{\Delta}$ and 
+$\alpha (w) < \alpha (z)$ in $\sigma$ then $\alpha (v) < \alpha (z)$ in $\overline{\Delta}$.\\
+(b) if rysunek in $R^+$ and $\alpha (v) < \alpha (w)$ in $\Delta$, then $\alpha (v) \overline {\Delta} \alpha (z)$\\
+\newline
+\underline {Proof}. Property (a) is a distinctive property of extension by left end points. To see that (b) is valid even when 
+$z \not\in C_{\alpha (x)}$, choose $v' \in C_{\alpha (v)}$ and $w' \in C_{\alpha (w)}$
+and an even up fence $F$ from $x$ to $w'$ such that $(F,v')$ witnesses $\alpha (v) < \alpha (w)$
+in $\Delta$. Let $v'' = max\{v,v'\}$ in $R^+$ and let $F'$ be an even up-fence from $x$ to $z$
+with $F' \subset F \cup \{w,z\}$. Then $(F',v'')$ witnesses $\alpha (v) < \alpha (z)$ in $\Delta$.\\
+
+Finally we are ready to show that there is no $(x,y)$-blocking intervel. Suppose to the contrary that
+$x = w_0 < w_1<...<w_n = y$ is a blocking intervel in $L^+_{\alpha}$. Then $x<w_1\parallel w_{n-1}<y$
+in $R^+$. Let $r$ be the least index such that $w_r < y$ in $R^+$. Clearly $2 \leq r\leq n-1$, $w_i \parallel w_r$
+for $1 \leq i \leq r-1, \alpha (w_{r-1}) < \alpha (w_r)$ in $\sigma$, and $w_r < w_1$ in $\Delta$. Let
+$s$ be the greatest index such that $s<r$ and $\alpha (w_r) < \alpha (w_s)$ in $\overline{\Delta}$.
+Clearly $1\leq s\leq r-2$. For a contradiction we show that $\alpha (w_r)< \alpha(w_{s+1})$ in
+$\overline{\Delta}$. First suppose $w_s < w_{s-1}$ in $R^+$. Either $\alpha (w_r) < \alpha (w_s)$
+in $\Delta$  or $\alpha (w_r) = \alpha (y)$ or $\alpha (w_s) = \alpha (x)$. In the first case
+the conclusion follows from (b), the second is trivial, and in the third it follows from the fact that
+rysunek is a subordered set of $R^+$, where $v= w_r$ and $z = w_{s+1}$. On the other hand if 
+$\alpha (w_s) < \alpha (w_{s+1})$ in $\sigma$ then the conclusion follows from (a).\\
+%
+% STRONA DWUDZIESTA
+%
+
+For the second part of the theorem let $K$ be as in the first part; let $L$ be the class
+of structures of form $\overline{P} = (P,R,C_1,...,C_c,L_1,...,L_{d-1})$, where $d=c{{c-1}\choose {t}}$
+such that $(P,R,C_1,...,C_c)$ is in $K$ and $(L_1,...,L_{d-1})$ is a realizer of $(P,R)$;
+and let $A=(N,S,N,...,N,S,...,S)$ where $S$ is the natural order on $N$. By Lemma 2 it suffices to show that the $K$-player
+has a winning strategy in the $K-L$ expansion game.
+
+The first step is to see that the $K$-player can force a position in which points
+from different chains $C_i$ and $C_j$ aer incomparable for all $i \neq j$ and each chain $C_i$ contais pair $p_i$ such that
+for each $i \neq j$ $p_i$ and $p_j$ are a pais of pointlike chains. First the $K$-player uses the 
+technique developed in the proof of Theorem 8 to assure that there exist $x_i,y_i \in C_i$
+for $1 \leq i \leq c$ such that the $L$-player has made $x_1<y_1$ and $x_j< y_j$ a pointlike 
+pair in $\overline{P}$ for $2 \leq j \leq c$. Next we observe that if $x<y$ and $u<v$ are pointlike pair in 
+$\overline{P}$ and $x<x'<y'<y$ and $u<u'<v'<v$ in $r^+$ then $x'<y'$ and $u'<v'$ are also a pair of 
+pointlike chains in $\overline{P}$. Thus we can repeat the technique inside the chains $x_i < y_i$
+to assure the existence of $x'_j,y'_j \in C_j, 2 \leq j\leq c$, such that $x_j<x_j'<y_j'<y_j$,
+$x_1<y_1$ and $x'_j<y'_j$ are a pointlike pair of chains in $\overline{P}$ for $1\leq j\leq c$ 
+and $s'_2<y'_2$ and $x'_k < y'_k$ are a pointlike pair of chains in $\overline{P}$ for $3 \leq k \leq c$.
+Counting in this manner the $K$-player can obtain the goal of the first stage.
+
+In the second satge the $K$-player plays two more elements to win. He first notes that linear extension $L_i$
+induces a linear order on $Q=\{p_1,...,p_c\}$ since $p_i$ behave pointlike. For $1\leq i \leq d-1$ let
+$q_i$ be the $t+1$st largest element of $Q$ in $l_i$ and let $X_i = \{C_j:q_i<p_j$ in $ L_i\}$.
+Choose an element $p_k \in Q$ and a $t$ element subset $X$ of $\{C_1,...,C_c\} - \{C_k\}$ such that
+$(p_k,X) \neq (q_i, X_i)$ for any $1 \leq i \leq d-1$. This is possible since there atte $d$ ways to pick
+$(p_k, X)$. Let $C_m$ be any element of every of $X$ and $C_n$ be any element of
+$Y=\{C_1,...,C_c\}-(X\cup \{C_k\})$. The $K$-player completes his win ny playing $u$ in $C_m$ so that
+$u$ is under every element of every chain in  $X$ and under the top element of $p_k$ and $v$ in $C_n$
+so that $v$ is over every element of every chain in $Y$ and $v$ is over the bottom element of $p_k$.
+This is depicted in Figure 6(b). The $L$-player cannot respond: He must put $v<u$ in some $L_j$, but
+this requires that $(q,X)=(q_i,X_i)$.\\
+
+It is not known whether it is necessary to forbid all crowns or just 3-crowns in order to obtain a bound
+on the recursive dimension of an ordered set in terms od its width. Intervel orders are important class of
+crown-free ordered sets. Kirstead, McNulty and Trotter [1984] proved that every recursive interval order
+that can be covered by $c$ recursive chains has recursive dimension at most $2c$. When combined with
+Theorem 4 this shows that every recursive interval order of width $w$ has recursive dimension at most 
+$6w-4$. Hopkins improved the second bound with the next theorem.\\
+%
+% STRONA DWUDZIESTA PIERWSZA
+%
+\newline
+\underline{Theorem} 10. (Hopkins [1991]) Every recursive interval order of width $w$ has recursive dimension
+at most $4w-4$; moreover there are recursive interval orders of width $w$ that have recursive dimension
+$\lceil {\frac 4 3}w \rceil$.\\
+\newline
+\underline{Proof}. Let $K$ be the class of intercel orders $P =(P,R)$ with widthat most $w$.
+For the first part let $L$ be the class of structures of the form $\overline{P}=(P,R,L_1,...,L_{4w-4})$
+such that $(P,R)$ is in $K$ and $(L_1,...,L_{4w-4})$ is a realizer of $(P,R)$. It suffices toshow that the $L$-player has a recursive winning
+strategy in the $K-L$ expansion game. Before rhis stratedy can be described it is becessary
+to introduce aome notation. The \underline{u}, \underline{down} and \underline{incomparable}
+sets of an element $x$ in $P$ are denoted by $U(x) =\{y\in P: x<y$ in $R\}$,
+$D(x)=\{y \in P:y<x$ in $R\}$ and $I(x) =\{y\in P: y\parallel x\}$. It is a property of interval
+orders that for all $x$ and $y$ in $P$, either $D(x) \subset D(y)$ or $D(y) \subset D(x)$
+and wither $U(x) \subset U(y)$ or $U(y) \subset U(x)$. Let 
+$D^*(x) = \{y: D(x) \subset D(y)$ and $ x\neq y\}$ and $U_*(x) =\{ y: U(x) \subset U(y)$ and $x \neq y\}$.
+The elemet $x$ is said to be \underline{down} (up) in  a linear extension $L$ if $x$ is less(greater)
+than every element of $D^*(x) (U_*(x))$ in $L$. It is an easy exercise to see that if $x$ is not down(up)
+in any $L_j, 1\leq j\leq 4w-4$, then the $K$-player can win the $K-L$ expansion game on the next move.
+With this in mind, let $L'$ be the class of structures $\overline{P}=(P,R,L_1,...,L_{4w-4})$ such that
+$\overline{P}$ is in $L$ and every element of $P$ is down in dome linear extension $\sigma \in M_1$
+and up in some linear extension $\tau \in M_2$, where $M_1 = \{L_1,...,L_{2w-2}\}$ and
+$M_2 = \{L_{2w-1},...,L_{4w-4}\}$. We will actually provide the $L'$-player with a winning strategy in
+the $K-L'$ expansion game.
+
+Suppose the $L'$-player is confronted with $P^+$ in $K$ and $\overline{P}$ in $L'$,
+where $P^+ = P \cup \{i\}$. To assure that $K_1 \cup M_2$ is a realizer of $(P,R)$ it
+suffices to argue that:
+\begin{itemize}
+  \item[(1)] every element of $max I(i)$ is under $i$ in some $L \in M_1 \cup M_2$ and
+  \item[(2)] every element of $min I(i)$ is over $i$ in some $L \in M_1 \cup M_2$ where minima and maxima are
+  with respect to $R$. To assure that every element of $P^+$ is down (up) in some
+  $L \in M_1, (L \in M_2)$ it is enough to have that:
+  \item[(3)] every element of $\{i\} \cup min I(x)$ is down in some $L \in M_1$ and
+  \item[(4)] every element of $\{i\} \cup max I(i)$ is up in some $L \in M_2$, since the
+  downess and upness of other elements will not be affected by the insertion of $i$. Finally, let
+  $A=U_*(i) \cap max I(i)$, $A'=(max I(i)) - A$, $B=D^*(i) \cap min I(i)$ and $B'=(min I(i))-B$.
+  Then $(*) a \in A$ iff $U(i) = U(a)$ for every $a \in max I(i)$ and $b \in B$ iff $D(i) = D(b)$
+  for every $b \in min I(i)$. It takes special care to put $i$ over elements of $A'$ or under
+  elements of $B'$
+\end{itemize}
+%
+% STRONA DWUDZIESTA DRUGA
+%
+
+The $L$-player should play as follows: He first selects a subset $M_1' \subset M_1$ of minimal
+cardinality such that every element of $A' \cup B$ is down in some $L \in M_1'$. For each
+$L \in M_1'$ he forms $L^+$ by inserting $i$ as high as possible. Then by $(*) i$ is over $x$:
+If not there exists $y \in P$ such that $i<y$ in $R$ and $y<x$ in $L$. Since $i \parallel x$,
+not $D(y) \subset D(x)$ in $R^+$, and thus $D(x) \subset D(y)$ in $R$; but then $x$ is not down
+in $L$. Thus (1) is satisfied and every element of $B$ is down in some $L^+$, with $L \in M_1$.
+Assume for now that $M_1 - M_1'$ is non-empty. For each $L \in M_1 - M_1'$ insert $i$ as low as
+possible in $L^+$ subject to $b' < i$ in $L^+$ if $b' \in B'$ and $b'$ is down in $L$.
+Then both $i$ and $b'\in B'$, which is down in $L$ are down in $L^+$. Thus (3) is satisfied.
+By playing dully on $M_2$, the $L$-player can also satisfy (2) and (4). Thus it only remains
+to show that $M_1 -M_1'$ and dually $M_2-M_2'$ are non-empty.
+
+It suffices to prove that $|M_1'| \leq 2w-3$. The width of $I(i)\leq w-1$. If
+$|A'\cup B| \leq 2w-3$ we are done; otherwise $|A'|=|B|=w-1$ and $A' \cap B = \emptyset$.
+In the latter case we show that if $a' \in A'$ is down $L$ then some $b \in B$ is also 
+down in $L$. Suppose not. Let $b$ be the least element of $B$ in $L$. Since $b$ is not down in $L$ there
+exists $p \in P$ such that $p<b$ in $L$ and $p \parallel b$ (and $D(b) \subset D(p)$). Thus
+$p$ is not over any element of $B$ in $R$ and thus $p<a'$ in $L$. Thus $D(p) \subset D(a')$ and
+the conclusion follows. By $(*)$ every element of $B \cup \{i\}$ has the same down set. Thus $p$ is not under any element of
+$B \cup \{i\}$ in $R$. But then $B \cup \{i,p\}$ contradicts the width of $P$ being $w$.
+
+For the socond part of the theorem let $K$ be as before; let $L$ be the class of structures
+of the form $\overline{P}=(P,R,L_1,...,L_t)$, there $t=\lceil \frac 4 3\rceil - 1$ such that
+$(P,R)$ is in $K$ and $(L_1,...,L_t)$ is a realizer of $(P,R)$; and let $A=(N,S,S,...,S)$
+where $S$ is the natural ordering on $N$. It suffices to show that the $K$-player has a winning
+strategy in the $K-L$ expansion game. We shall need the following combinatorial result.\\
+\newline
+\underline{Lemma} 4. (Trotter and Monroe [1982]) If $f$ and $g$ are functions from $\{1,...,t\}$
+to $\{1,..,w\}$, where $t = \lceil {\frac 4 3}w \rceil - 1$ then there exists $i,j \in \{1,...,w\}$
+such that if $f(m) = i$ and $g(n) = j$ then $m=n$.\\
+
+The $K$-player begins by playing the ordered set $p=(P,R)$ consisting of $n$ element antichains
+$A$ and $B$ such that every element of $A$ is over every element of $B$ in $R$. After the $L$-player
+has responded with $\overline{P}$, the $K$-player lets $f(m)$ be the unique element of $B$
+that is down in $L_m$ and $g(m)$ be the unique element of $B$ that is up in $L_m$. By the lemma there exists
+$a \in A$ and $b \in B$ and $m$ such that $a$ is only down in $L_m$ and $b$ is only up in $L_m$.
+The $K$-player now wins by adding a new point $c$ which is under every element of $A$ except
+$a$ and over every element of $B$ except $b$. Then $c$ can only be over $a$ in $L_j$ and can only be under
+$b$ in $L_j$, but cannot be coth over $a$ and under $b$ in the same extension. The case
+$w=3$ is shown in Figure 8.\\
+%
+% STRONA DWUDZIESTA TRZECIA
+%
+
+
+\noindent\S 6 Open Problems and Concluding Remarks\\
+
+
+As mentioned inthe introduction there are two reasonable responses to the negative result that
+a certain class of structures has no recursive member. The recursion theoretic response has not
+been discussed here. The interested reader can consult Jockush [1972], Jockush and Soare [1972]
+and Rosenstein [1982], among others. We took the combinatorial response and centered our discussion on recursive
+ordered sets, A similar set of results exists for (highly) recursive graphs. These results can be found in Bean [1976],
+Kierstead [1981b], [1983], Manaster and Rosenstein [1973] Schmerl [1980], [1982], and Tverberg [*].
+Other types of combinatorial structures should also yield interesting recursive results.\\
+
+We close by presenting a short list of extremal problems for recursive ordered sets.\\
+
+\begin{itemize}
+  \item[(1)] Let $b(w)$ be the least number such that every recursive ordered set with width $w$ can be
+  covered by $w$ recursive chains. Is $b(w)$ polynomial? What is the value of $b(2)$\\
+  \item[(2)] Does there exist a function $c(i)$ such that every recursive comparability graph with 
+  independence number i can be covered by $c(i)$ recursive cliques?\\
+  \item[(3)] Is there a finite bound in terms of width on the recursive dimension of 3-crown-free ordered sets?\\
+  \item[(4)] Give better bounds on the recursive dimension of crown-free ordered sets in terms of either width 
+  or the number of recursive chains required to cover the ordered set. The special case of the interval orders is also of interest.
+\end{itemize}
+
+
+
+
 % BIBLIOGRAFIA
 \renewcommand\refname{Bibliography}
 \bibliographystyle{abbrvnat}
@@ -426,8 +887,14 @@ immediately	below   $i$   in   $(A^+,S^+)\lceil D_j^+$  are contained in   $C_{j
 \includegraphics[scale=0.5]{figures/Figure1.png}\\
 \textit{Figure 1}\\
 \vspace{1cm}
+\includegraphics[scale=0.5]{figures/Figure2.png}\\
+\textit{Figure 2}\\
+\vspace{1cm}
 \includegraphics[scale=0.5]{figures/Figure3.png}\\
 \textit{Figure 3}\\
+\includegraphics[scale=0.4]{figures/Figure4.png}\\
+\textit{Figure 4}\\
+\vspace{1cm}
 \newpage
 \includegraphics[scale=0.5]{figures/Figure5.png}\\
 \textit{Figure 5}\\
