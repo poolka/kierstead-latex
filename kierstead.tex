@@ -432,7 +432,7 @@ So suppose that $i\not\sim^+x$. Without loss of generality suppose that $i<x$ in
 $i \not\sim u \not\sim v \not\sim x$, and $u$ abd $v$ are each the first elements of their respective equivalence classes to be played. Since $B^+$
 is maximal there are elements $u'$ and $v'$ in $B^+$ such that $u' \parallel u$ and $v' \parallel v$ in $R^+$. In fact $u'$ and $v'$
 can be chosen so that $u'$ was played before $u$ and $v'$ was played before $v$. We claim that $v'<x$ in $R$: Cartainly not $x<v'$ in $R$ since
-$v<x$ in $S$. If x were incomparable to $v'$ then $x$ would be equivalent to $v$. This uses (1d), the bias for (7), and the fact that $v$
+$v<x$ in $S$. If $x$ were incomparable to $v'$ then $x$ would be equivalent to $v$. This uses (1d), the bias for (7), and the fact that $v$
 was the first element of its equivalence class played. Similarly $u < v'$. Here, lacking the bias for (7), we need that both $u$ and $v$
 are the first elements of their respective equivalence classes. Also $u' < v'$. Finally either $i < u'$ ot $i<u$ in $R^+$: Certainly not
 $u'<i$ in $R^+$. If $u' \parallel i$ in $R^+$ then using (1d) $i<u$ in $R^+$. In either case $i<x$ in $R^+$. This is illustrated in Figure 2. 
@@ -455,7 +455,7 @@ were able to give an exact linear answer. These results are presented below.\\
 \newline
 \underline{Proof}. Let $K$ be the class of ordered sets of width 2; let $L$ be the class of structures $(P,R,c_1,...,c_4)$
 such that $(P,R)$ is in $K$ and $(c_1,...,c_4)$ is a chain cover of $(P,R)$; and let $A=(N,S,N,...,N))$ where $S$ is the natural order on $N$.
-Then $K,L$ and $A$ satisfy the hypothesis of Lemma 2. Thus it suffices to provide the $K$-player with a winning atrategy in the $K-L$ expansion
+Then $K,L$ and $A$ satisfy the hypothesis of Lemma 2. Thus it suffices to provide the $K$-player with a winning strategy in the $K-L$ expansion
 game.
 
 We begin by identyfying two positions from which the $K$-player can win. These positions are shown in \underline{Figure 4(a) and 4(b)}. The loops
@@ -529,11 +529,11 @@ even respond to the first play, so suppose $w=v+1$ and $S_v$ is a winning atrate
 for the $K_v$-player in the $K_v-L_v'$ expansion game. The $K_w$-player starts
 the game by using the strategy $S_v$ to play a chain of 
 $n = 3 \cdot {{3w-3} \choose {3v-2}} +1$ subinterval orders $P_i$ in $K_v$ so that
-the $L_w$player has used the same $3v-2$ distinguished chains.The resto of $K$-players
+the $L_w$player has used the same $3v-2$ distinguished chains. The rest of the $K$-player
 strategy is illustrated in  Figure 5, where loops represent possibly empty chains of
 suborders $P_i$ and upper case letters represent chains among the distinuished chains.
 Te $K$-player plays $x$ and $y$, as shown in \underline{Figure 5(a)}, and then waits
-to see whether the $L$-player puts them both in the same chain. Dependinf on the 
+to see whether the $L$-player puts them both in the same chain. Depending on the 
 $L$-player's choice the $K$-player wins by playing as shown in
 \underline{Figure 5(b) or 5(c)}.\\
 
@@ -555,7 +555,7 @@ ${{w+1} \choose 2}^{d-1}$ recursive chains.\\
 \underline{Proof}. We argue by induction on $d$. Let $P = (P,R)$ be na ordered set 
 with recursive dimension $d$ and width $w$. The case $d=1$ is trivial, so suppose
 $d=e+1$ and $(L_1,...,L_{e+1})$ is a recursive realizer of $P$. Let
-$s=l_1 \cap ... \cap L_e\cup L_{e+1}^*$, where $L_{e+1}^*$ is the dual of $L_{e+1}$.
+$s=L_1 \cap ... \cap L_e\cup L_{e+1}^*$, where $L_{e+1}^*$ is the dual of $L_{e+1}$.
 Then $P=(P,S)$ is recursive and the height of $P$ is bounded by $w$. Thus by Theorem 1, $P$
 can be covered by ${w+1} \choose 2$ recursive antichains in $P$. If $A$ is a recursive antichain
 realizer $(L_1 \lceil A,...,L_e \lceil A)$. Thus be the inductive hypothesis, each of the 
@@ -566,7 +566,7 @@ recursive chains in $P$.\\
 \noindent\S 5 Recursive Realizers\\
 
 
-The concept of recursice dimension, which was introduced in $\S 3$, is particularly
+The concept of recursive dimension, which was introduced in $\S 3$, is particularly
 rewarding because of its interaction with theories of recursive chain and antichain covers.
 We have already seen that this concept can be combined with results on recursive antichain covers to prove results
 on recursive chain covers. In this section we will use recursive chain covers to construct
@@ -579,7 +579,7 @@ will require more linear extensions and be considerably more involved.
 %
 % STRONA SIEDEMNASTA
 %
-Before proceeding with the main redult we must narrow the scope of ordered
+Before proceeding with the main result we must narrow the scope of ordered
 sets to be considered. A $c$-crown $(c>2)$ is an ordering on $2c$ elements
 of the form shown in Figure 6(a). An ordered set is crown-free
 if it does not contain any $c$-crowns as suborders. Our first result shows that we must restrict our
@@ -606,8 +606,8 @@ stages. During the first stage he continues to add new points to the bottom
 of $C_1$ and to the top of $C_2$ so taht there are no comparabilities between points 
 in $C_1$ and points in $C_2$, until the $L$-player is forced to make the bottom
 two points $c_1^{i+1} < c_1^i$ of $C_1$ and the top two points $c_2^i < c_2^{i+1}$
-of $C_2$ be a pair of point like chains. After at most $2d$ roinds whis will be accomplished:
-Let $M_i=\{k: c_a^i < c_2^i$ in $L_k\}$. Observe that $M_i \subset M_{i+1}$ ant that if $M^i = M^{i+1}$ then
+of $C_2$ be a pair of point like chains. After at most $2d$ rounds this will be accomplished:
+Let $M_i=\{k: c_a^i < c_2^i$ in $L_k\}$. Observe that $M_i \subset M_{i+1}$ and that if $M^i = M^{i+1}$ then
 $c^{i+1}_1 < c^i_1$ and $c_2^i < c_2^{i+1}$ are a pair of point likechains. Since $(L_1,...,L_d)$
 is a realizer of $(P,R), 1 \leq |M_i| \leq |M_{i+1}| \leq d-1$. Thus after
 $i+1 \leq d$ sequences of two rounds $M_i = M_{i+1}$ and we are done. 
@@ -623,7 +623,7 @@ a bound, in terms of width, on the recursive dimension of crown-free ordered set
 \underline{Theorem} 9. (Kierstead, McNulty and Trotter [1984]) Every recursive crown-free
 ordered set, which can be covered by $c$ recursive chains, has recursive dimension
 at most $c!$; moreover there exists recursive crown-free ordered sets, which can be covered
-by $c$ recursive chains, but have recursive simension at least $c {{c-1}\choose t}$, where
+by $c$ recursive chains, but have recursive dimension at least $c {{c-1}\choose t}$, where
 $t= \lceil \frac{c-1} {2} \rceil$.\\
 \newline
 %
@@ -640,10 +640,10 @@ expansion game.
 
 Suppose that in the $i+1$st round of play the $L$-player is confronted by $P^+$ in
 $K$ and $\overline{P}$ in $L$, where $\overline{P} = P \cup \{i\}$. He must decide where to place $i$
-in wach of the linear extensions $L^+_j, 1\leq j\leq c!$. In each $L_j$ there is ab
+in wach of the linear extensions $L^+_j, 1\leq j\leq c!$. In each $L_j$ there is an
 interval into which $i$ can be inserted: The upperbound of this interval (if any)
 is the $L_j$-least element of $P$ that is larger than $i$ in $R^+$, while the lower
-bound (if any) is the $L_j$-largest element of $P$ that is less than $i$ in $R^+$
+bound (if any) is the $L_j$-largest element of $P$ that is less than $i$ in $R^+$.
 Positioning $i$ anywhere in this interval will be based on the chain cover $(C^+_1,...,C^+_c)$.
 For each $x \in P^+$ let $\alpha (x)$ be the index of the chain into which the $K$-player has
 placed $x$. Relabel the linear extentions $L_1,...,L_{c!}$ as $...L_{\sigma}...$, where
@@ -681,7 +681,7 @@ and that the conditions need not be satisfied by every pair of representatives.\
 \underline{Claim} 1. The relation $\Delta$ is a strict interval order.\\
 \newline
 \underline{Proof}. It suffices to chow that $\Delta$ is irreflexive and does not induce \includegraphics[scale=0.25]{figures/small/small1.png}.
-The formar is obvious since each $C_{\alpha}$ is a chain. Suppose $\Delta$ contains \includegraphics[scale=0.25]{figures/small/small3.png}
+The former is obvious since each $C_{\alpha}$ is a chain. Suppose $\Delta$ contains \includegraphics[scale=0.25]{figures/small/small3.png}
 Let $(F,p)$ and $(H,r)$ witness $\beta \Delta \gamma$ and $\delta \Delta \epsilon$. Since neither
 $\beta \Delta \epsilon$ nor $\delta \Delta \gamma$, $p$ and $r$ are both under elements of $H$
 and $F$. Let $s'$ be the element of $H$ closest to $x$ that is over $p$ and $q'$ be the element of $F$
