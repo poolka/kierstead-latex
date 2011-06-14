@@ -235,7 +235,7 @@ contradict   $\bigcup_{s\in N} \meph{B}_e^s = \meph{B}_e$. $\Box$\\
 Every ordered set of finite height (the number of points in a maximum chain) h   can be covered by   h   antichains. 
 Schmerl proved the following recursive version of this result.\\
 \newline
-\underline{Theorem} 1.(Schmerl [1979])   Every recursive ordered set of finite height h can be covered by $\binom{h+1}{2}$  recursive antichains; moreover for all positive integers   h there are recursive ordered sets of height   h   that cannot be covered by less than $\binom{h+1}{2}$ recursive antichains.\\
+\underline{Theorem} 1.(\cite{Schmerl79})   Every recursive ordered set of finite height h can be covered by $\binom{h+1}{2}$  recursive antichains; moreover for all positive integers   h there are recursive ordered sets of height   h   that cannot be covered by less than $\binom{h+1}{2}$ recursive antichains.\\
 \newline
 \underline{Proof}. Let K be the class of ordered sets P = (P,R) of height at most h and let L be the class of all structures of the form $\bar{P} = (P,R,A_1,...,A_n)$ where (P,R) is in K, $(A_1,...,A_n)$ is an antichain cover of P, and $n = \binom{h+1}{2}$. Note that K and L satisfy the hypothesis of Lemma 1. 
 To prove the first part of the theorem we provide the L-player with a recursive winning strategy for the K-L expansion game. Relabel the antichains $A_1,...,A_n$ as $..,A_d,_u...$ where $0 \leq d+u \leq h-1$.   
@@ -312,7 +312,7 @@ Lemma 3.    Let   $D = (D, \rightarrow)$ be a digraph which induces neither a di
 Let   $K$   be a clique and $I$ an independent set in   $\meph{D}$   such that for each   $\meph{k\subset K}$   there is  $i\in I$   such that $i\rightarrow k$. 
 Then there is some $i\in I$   such that   $K\cup \{i\}$ is a clique in $\meph{D}$.$\Box$\\
 \newline
-\underline{Theorem} 3. (Kierstead [1984]) If   $G$   is a recursive digraph that contains neither a directed 3-cycle nor \includegraphics[scale=0.25]{figures/small/1.png} nor \includegraphics[scale=0.25]{figures/small/2.png} as induced
+\underline{Theorem} 3. (\cite{Kierstead84}) If   $G$   is a recursive digraph that contains neither a directed 3-cycle nor \includegraphics[scale=0.25]{figures/small/1.png} nor \includegraphics[scale=0.25]{figures/small/2.png} as induced
 \newpage
 %
 % STRONA DZIESIĄTA
@@ -348,7 +348,7 @@ Covering recursive ordered sets with recursive chains presents a considerably mo
 %
 % STRONA JEDENASTA
 %
-\noindent\underline{Theorem} 4.    (Kierstead [1981a] and Szemer\'{e}di [1982]) Every recursive ordered set of finite width   $w$   can be covered by $(5^w   - 1)/4$   recursive chains; moreover for all positive integers    $w$    there exist recursive ordered sets with width   $w$     that cannot be covered by fewer than  $\binom{w+1}{2}$ recursive chains.\\
+\noindent\underline{Theorem} 4.    (\cite{Kierstead81a} and \cite{Szemeredi82}) Every recursive ordered set of finite width   $w$   can be covered by $(5^w   - 1)/4$   recursive chains; moreover for all positive integers    $w$    there exist recursive ordered sets with width   $w$     that cannot be covered by fewer than  $\binom{w+1}{2}$ recursive chains.\\
 \newline
 \underline{Proof}.     Theorem 2 was formulated specifically to prove the second part of 
 Theorem 4.    Let    $\meph{P} = (P,R)$ be a recursive ordered set of height $w$ which has a
@@ -399,7 +399,7 @@ $l\leq j\leq m$,    i.e.    if   $x,y,z \in D_j$, $x-z$, and   $x<y<z$ in   $S$,
 Any winning strategy   $S$   for the $L$-player in the   $K_w-L$ expansion game can
 be trivially modified to a winning strategy for the   $L_w$-player in the $K_w-L_w$ expansion game, since $(B,C_{1,1},...,C{m,5})$    is a chain cover of   $P$   in   $R$. We
 present such a strategy below.\\
-\indent Suppose that after the ith round of play the   $K$-player is confronted with $\meph{\hat{P}}$   in   $L$   and plays   $\meph{P^+}$   in $K_w$, where   $\meph{P^+} = P U {i}$.   The   $L$-player should respond with   $\meph{\hat{P}^+}$ as follows.\\
+\indent Suppose that after the ith round of play the   $K$-player is confronted with $\meph{\hat{P}}$   in   $L$   and plays   $\meph{P^+}$   in $K_w$, where   $\meph{P^+} = P \cup {i}$.   The   $L$-player should respond with   $\meph{\hat{P}^+}$ as follows.\\
 \newline
 \underline{Step} 1: Construction of   $A^+,B^+,S^+,D_1^+,...,D_m^+$.    If   $B \cup \{i\}$    is a chain in $R^+$ put   $i$    into   $B^+$; otherwise put   $i$   into   $A^+$   and let   $x<i (i<x)$   in   $S^+$ iff at least one of the following holds:\\
 \newline
@@ -410,7 +410,7 @@ present such a strategy below.\\
 
 Once $(A^+,S^+)$   has been played view it as a play by the   $K_v$-player in the $K_v-L_v$ expansion game and put   $i$ into   $D_j^+$, where   $j$    is   chosen by the winning strategy $S_v$.\\
 \newline
-\underline{Step} 2:   Construction of  $\sim^+, C{1,1}^+,...,C{m,5}^+$.  Suppose that $i\in D_j^+$.   Let   $i^-$ be
+\underline{Step} 2:   Construction of  $\sim^+, C_{1,1}^+,...,C_{m,5}^+$.  Suppose that $i\in D_j^+$.   Let   $i^-$ be
 the largest element of   $D_j$    less than   $i$ in   $S$     and   $i$     be the smallest
 element of	$D_j$ greater than   $i$   in   $S^+$.   Extend  $\sim$   to  $\sim^+$ by:
 (7) $i$    is	in the equivalence class of   $i^-$   if there   exists   $b \in B$ such
