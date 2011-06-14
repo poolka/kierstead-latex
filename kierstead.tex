@@ -742,9 +742,9 @@ In the second satge the $K$-player plays two more elements to win. He first note
 induces a linear order on $Q=\{p_1,...,p_c\}$ since $p_i$ behave pointlike. For $1\leq i \leq d-1$ let
 $q_i$ be the $t+1$st largest element of $Q$ in $l_i$ and let $X_i = \{C_j:q_i<p_j$ in $ L_i\}$.
 Choose an element $p_k \in Q$ and a $t$ element subset $X$ of $\{C_1,...,C_c\} - \{C_k\}$ such that
-$(p_k,X) \neq (q_i, X_i)$ for any $1 \leq i \leq d-1$. This is possible since there atte $d$ ways to pick
+$(p_k,X) \neq (q_i, X_i)$ for any $1 \leq i \leq d-1$. This is possible since there are $d$ ways to pick
 $(p_k, X)$. Let $C_m$ be any element of every of $X$ and $C_n$ be any element of
-$Y=\{C_1,...,C_c\}-(X\cup \{C_k\})$. The $K$-player completes his win ny playing $u$ in $C_m$ so that
+$Y=\{C_1,...,C_c\}-(X\cup \{C_k\})$. The $K$-player completes his win by playing $u$ in $C_m$ so that
 $u$ is under every element of every chain in  $X$ and under the top element of $p_k$ and $v$ in $C_n$
 so that $v$ is over every element of every chain in $Y$ and $v$ is over the bottom element of $p_k$.
 This is depicted in Figure 6(b). The $L$-player cannot respond: He must put $v<u$ in some $L_j$, but
@@ -766,13 +766,13 @@ $\lceil {\frac 4 3}w \rceil$.\\
 \newline
 \underline{Proof}. Let $K$ be the class of intercel orders $P =(P,R)$ with widthat most $w$.
 For the first part let $L$ be the class of structures of the form $\overline{P}=(P,R,L_1,...,L_{4w-4})$
-such that $(P,R)$ is in $K$ and $(L_1,...,L_{4w-4})$ is a realizer of $(P,R)$. It suffices toshow that the $L$-player has a recursive winning
-strategy in the $K-L$ expansion game. Before rhis stratedy can be described it is becessary
-to introduce aome notation. The \underline{u}, \underline{down} and \underline{incomparable}
+such that $(P,R)$ is in $K$ and $(L_1,...,L_{4w-4})$ is a realizer of $(P,R)$. It suffices to show that the $L$-player has a recursive winning
+strategy in the $K-L$ expansion game. Before this strategy can be described it is necessary
+to introduce some notation. The \underline{up}, \underline{down} and \underline{incomparable}
 sets of an element $x$ in $P$ are denoted by $U(x) =\{y\in P: x<y$ in $R\}$,
 $D(x)=\{y \in P:y<x$ in $R\}$ and $I(x) =\{y\in P: y\parallel x\}$. It is a property of interval
 orders that for all $x$ and $y$ in $P$, either $D(x) \subset D(y)$ or $D(y) \subset D(x)$
-and wither $U(x) \subset U(y)$ or $U(y) \subset U(x)$. Let 
+and either $U(x) \subset U(y)$ or $U(y) \subset U(x)$. Let 
 $D^*(x) = \{y: D(x) \subset D(y)$ and $ x\neq y\}$ and $U_*(x) =\{ y: U(x) \subset U(y)$ and $x \neq y\}$.
 The elemet $x$ is said to be \underline{down} (up) in  a linear extension $L$ if $x$ is less(greater)
 than every element of $D^*(x) (U_*(x))$ in $L$. It is an easy exercise to see that if $x$ is not down(up)
@@ -841,7 +841,7 @@ that is down in $L_m$ and $g(m)$ be the unique element of $B$ that is up in $L_m
 $a \in A$ and $b \in B$ and $m$ such that $a$ is only down in $L_m$ and $b$ is only up in $L_m$.
 The $K$-player now wins by adding a new point $c$ which is under every element of $A$ except
 $a$ and over every element of $B$ except $b$. Then $c$ can only be over $a$ in $L_j$ and can only be under
-$b$ in $L_j$, but cannot be coth over $a$ and under $b$ in the same extension. The case
+$b$ in $L_j$, but cannot be both over $a$ and under $b$ in the same extension. The case
 $w=3$ is shown in Figure 8.\\
 %
 % STRONA DWUDZIESTA TRZECIA
@@ -851,7 +851,7 @@ $w=3$ is shown in Figure 8.\\
 \noindent\S 6 Open Problems and Concluding Remarks\\
 
 
-As mentioned inthe introduction there are two reasonable responses to the negative result that
+As mentioned in the introduction there are two reasonable responses to the negative result that
 a certain class of structures has no recursive member. The recursion theoretic response has not
 been discussed here. The interested reader can consult Jockush [1972], Jockush and Soare [1972]
 and Rosenstein [1982], among others. We took the combinatorial response and centered our discussion on recursive
@@ -865,7 +865,7 @@ We close by presenting a short list of extremal problems for recursive ordered s
   \item[(1)] Let $b(w)$ be the least number such that every recursive ordered set with width $w$ can be
   covered by $w$ recursive chains. Is $b(w)$ polynomial? What is the value of $b(2)$\\
   \item[(2)] Does there exist a function $c(i)$ such that every recursive comparability graph with 
-  independence number i can be covered by $c(i)$ recursive cliques?\\
+  independence number $i$ can be covered by $c(i)$ recursive cliques?\\
   \item[(3)] Is there a finite bound in terms of width on the recursive dimension of 3-crown-free ordered sets?\\
   \item[(4)] Give better bounds on the recursive dimension of crown-free ordered sets in terms of either width 
   or the number of recursive chains required to cover the ordered set. The special case of the interval orders is also of interest.
