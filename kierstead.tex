@@ -22,6 +22,10 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \begin{document}
+%
+% STRONA PIERWSZA
+%
+\normalsize
 \thispagestyle{plain}
 \addtolength{\voffset}{-1.5cm}
 \begin{flushleft}
@@ -32,7 +36,8 @@ Volume 57, 1986
 \begin{center}
 RECURSIVE ORDERED SETS\\
 \vspace{1mm}
-Henry A. Kierstead\\
+Henry A. Kierstead\\[\baselineskip]
+{\small (\LaTeX ed by Aleksandra Piktus and Bartosz Szabucki)}
 \end{center}
 \vspace{2mm}
 \onehalfspacing
@@ -55,14 +60,16 @@ The resulting combinatorial theory is the subject of this article, which in part
 \indent
 Let us agree that a structure is available for inspection if it is recursive, where, roughly speaking, a relational structure   P   is recursive if it is recursive, where, roughly speaking, a relational structure P is recursive if\\
 ---------------\\
-\indent 1980 Mathematics Subject Classification. Primary 03D45.\\
-\indent Supported by ONR grant N00014-85K-0494
-\newline
+{\footnotesize \indent 1980 Mathematics Subject Classification. Primary 03D45.\\
+\indent Supported by ONR grant N00014-85K-0494}
 \begin{flushright}
-\copyright 1986 American Mathematical Society\\ 0271-4132/86 $1.00 + $.25 per page
+{\footnotesize \copyright 1986 American Mathematical Society\\ 0271-4132/86 \$1.00 + \$.25 per page}
 \end{flushright}
 \onehalfspacing
 \newpage
+%
+%	STRONA DRUGA
+%
 \addtolength{\voffset}{1.5cm}
 \noindent there is a finite algorithm that will provide yes-no answers to questions of the form:  "Is    x    in the domain of    P?" and "Does $\bar{x}$    hold for the relation R?"  We shall see that the uneasiness resulting from the use of the Compactness Theorem is well founded,  for there exist recursive ordered sets (necessarily infinite) with finite width   w   that   cannot be covered by w recursive chains.    
 Two reasonable responses to this negative result are the traditional recursion theoretic response of analyzing the "degree of non-computability" of such a cover and the more recent combinatorial response, which we shall pursue, of searching for a recursive chain cover that uses some finite number of additional chains. 
@@ -86,7 +93,9 @@ Incomparability in ordered sets is denoted by $\Vert$. The restriction of a stru
 In this section we use the language of general relational structures to define the notion of an expansion theorem.   Next we review the basics of elementary recursion theory and present the notion of a recursive expansion theorem.    Finally we introduce expansion games and prove two lemmas which reduce the proofs of recursive expansion theorems to finding winning strategies in expansion games.   These games are interesting in their own right and are related to on line algorithms.
 
 \newpage
-
+%
+% STRONA TRZECIA
+%
 A (relational) \underline{structure} is a system   A = (A, $\bar{R}$)   where   $\bar{R}$   is a sequence of relations on the domain   A.   
 To avoid certain technical difficulties we will only consider structures with finitely many relations.    
 Structures will be denoted with bold face letters;  the same letter in standard form will denote the domain of the structure.   
@@ -112,6 +121,9 @@ Let $\Phi_e$   be the partial recursive function computed by the eth algorithm i
 The execution of      algorithm on a particular input occurs in a step by step manner.    
 If the execution of the   eth   algorithm   on   x   halts after at most   n   steps and outputs   y   we say that   $\Phi_e^n(x)$   is defined and equals y;
 \newpage
+%
+% STRONA CZWARTA
+%
 
 
 \noindent otherwise we say that  $\Phi_e^n(x)$    is undefined.   With special care (Kleene [ 1936], Turing [1936]) we can arrange the list so that the predicate   T = \{(e,x,n): $Phi_e^n(x)$   is defined\} is recursive.    
@@ -131,6 +143,9 @@ Similarly a \underline{strategy} for the   L-\underline{player}   is a function 
 winning strategy for the   K - L   expansion game then there is a fixed   n such that regardless of how the   L-player responds the   K-player can win in at most n   rounds:   Consider the tree, whose nodes are the   L-structures that can start some round of a   K - L   expansion game in which the K-player follows his winning strategy, and whose nodes are ordered by the substructure relation.
 This tree is finitely branching.    If the   L-player could force arbitrarily long games, then the tree would be infinite, and by K\"{o}nig's Lemma would contain an infinite branch, which would correspond to a winning game for the
 \newpage
+%
+% STRONA PIĄTA
+%
 \noindent L-player playing against the   K-player's winning strategy.    
 Thus if the K-player has a winning strategy that strategy can be chosen to be finite and thus recursive.    
 On the other hand, it is conceivable that the L-player has a winning strategy, which is so complex that it cannot be described by an algorithm.
@@ -138,9 +153,9 @@ On the other hand, it is conceivable that the L-player has a winning strategy, w
 
 The reminder of this section is devoted to reducing the recursive
 theorems to follow to game theoretic results.    In order to state the crucial
-lemmas we need to define several operations on structures. The \underline{union} \underline{of} underline{a}
+lemmas we need to define several operations on structures. The \underline{union} \underline{of} \underline{a}
 \underline{chain} of similar substructures $(A_0,\bar{R}_0) \subset (A_1,\bar{R}_1) \subset ...$ denoted by
-$(A,\bar{R}) =  \bigcup_{i\in N}(A_i,\bar{R}_i)$,  is defined by   $A = \bigcup_{i\in N} A_i$ . and   $\bar{x} \subset R$ iff $\bar{x} \in R_i$, for
+$(A,\bar{R}) =  \bigcup_{i\in N}(A_i,\bar{R}_i)$,  is defined by   $A = \bigcup_{i\in N} A_i$. and   $\bar{x} \subset R$ iff $\bar{x} \in R_i$, for
 some   $i \in N$, where   R   and   $R_i$    are corresponding relations in   $\bar{R}$   and   $\bar{R}^+$.
 Let   $A = (A,\bar{R})$   be a structure and   f   be   a bijection from A to   B. The
 \newcommand{\meph}{\mathbf}
